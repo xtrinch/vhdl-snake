@@ -1,0 +1,1426 @@
+Release 14.6 - xst P.68d (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> Reading design: FRISoC_top.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "FRISoC_top.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "FRISoC_top"
+Output Format                      : NGC
+Target Device                      : xc3s500e-5-fg320
+
+---- Source Options
+Top Module Name                    : FRISoC_top
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "E:/FRI/DN/Seminar/counter.vhd" in Library work.
+Architecture behavioral of Entity counter is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/RAM30x40.vhd" in Library work.
+Architecture behavioral of Entity ram32x40 is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/hsync.vhd" in Library work.
+Architecture behavioral of Entity hsync is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/vsync.vhd" in Library work.
+Architecture behavioral of Entity vsync is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/mealy_control_unit.vhd" in Library work.
+Architecture behavioral of Entity mealy_control_unit is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/shift_register.vhd" in Library work.
+Architecture behavioral of Entity shift_register is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/sync_signal.vhd" in Library work.
+Architecture behavioral of Entity sync_signal is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/negfront_detector.vhd" in Library work.
+Architecture behavioral of Entity negfront_detector is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/seg7.vhd" in Library work.
+Architecture behavioral of Entity seg7 is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/prescaler.vhd" in Library work.
+Architecture behavioral of Entity prescaler is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/kcpsm3.vhd" in Library work.
+Architecture low_level_definition of Entity kcpsm3 is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/SNAKE.VHD" in Library work.
+Entity <snake> compiled.
+Entity <snake> (Architecture <low_level_definition>) compiled.
+Compiling vhdl file "E:/FRI/DN/Seminar/topModule.vhd" in Library work.
+Architecture behavioral of Entity topmoduleps2 is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/topModuleFrameBuffer.vhd" in Library work.
+Architecture behavioral of Entity topmoduleframebuffer is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/randomGen.vhd" in Library work.
+Architecture behavioral of Entity randomgen is up to date.
+Compiling vhdl file "E:/FRI/DN/Seminar/FRISoC_top.vhd" in Library work.
+Architecture behavioral of Entity frisoc_top is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <FRISoC_top> in library <work> (architecture <behavioral>).
+
+Analyzing hierarchy for entity <kcpsm3> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <snake> in library <work> (architecture <low_level_definition>).
+
+Analyzing hierarchy for entity <topModulePS2> in library <work> (architecture <Behavioral>) with generics.
+	width = 4
+
+Analyzing hierarchy for entity <topModuleFrameBuffer> in library <work> (architecture <Behavioral>) with generics.
+	hcount_width = 11
+	vcount_width = 10
+
+Analyzing hierarchy for entity <randomGen> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <mealy_control_unit> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <shift_register> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <sync_signal> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <negfront_detector> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <seg7> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <prescaler> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <RAM32x40> in library <work> (architecture <Behavioral>).
+
+Analyzing hierarchy for entity <hsync> in library <work> (architecture <Behavioral>) with generics.
+	back_porch = 96
+	column_width = 10
+	display_time = 1280
+	front_porch = 50
+	hcount_width = 11
+	pulse_width = 192
+	scan_time = 1600
+
+Analyzing hierarchy for entity <vsync> in library <work> (architecture <Behavioral>) with generics.
+	back_porch = 99
+	display_time = 480
+	front_porch = 5
+	pulse_width = 2
+	scan_time = 521
+	vcount_width = 10
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <behavioral>) with generics.
+	reset_value = 1599
+	width = 11
+
+Analyzing hierarchy for entity <counter> in library <work> (architecture <behavioral>) with generics.
+	reset_value = 520
+	width = 10
+
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 289: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1200: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 452: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 483: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 606: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 614: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 381: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 423: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 525: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 597: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 682: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1109: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1136: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1220: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1269: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 332: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 371: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 403: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 413: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 432: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 442: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 468: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 493: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 554: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 587: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 794: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 871: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 886: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 937: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 956: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1244: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1301: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1311: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1327: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1415: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1448: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 828: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 1368: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/kcpsm3.vhd" line 906: attribute on instance <INIT> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INITP_00> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INITP_01> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INITP_02> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INITP_03> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INITP_04> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INITP_05> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INITP_06> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INITP_07> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_00> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_01> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_02> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_03> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_04> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_05> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_06> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_07> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_08> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_09> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_0A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_0B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_0C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_0D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_0E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_0F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_10> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_11> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_12> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_13> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_14> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_15> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_16> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_17> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_18> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_19> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_1A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_1B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_1C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_1D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_1E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_1F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_20> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_21> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_22> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_23> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_24> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_25> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_26> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_27> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_28> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_29> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_2A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_2B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_2C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_2D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_2E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_2F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_30> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_31> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_32> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_33> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_34> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_35> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_36> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_37> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_38> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_39> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_3A> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_3B> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_3C> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_3D> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_3E> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+WARNING:Xst:2591 - "E:/FRI/DN/Seminar/SNAKE.VHD" line 182: attribute on instance <INIT_3F> overrides generic/parameter on component. It is possible that simulator will not take this attribute into account.
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing Entity <FRISoC_top> in library <work> (Architecture <behavioral>).
+WARNING:Xst:753 - "E:/FRI/DN/Seminar/FRISoC_top.vhd" line 118: Unconnected output port 'parity_o' of component 'topModulePS2'.
+WARNING:Xst:819 - "E:/FRI/DN/Seminar/FRISoC_top.vhd" line 186: One or more signals are missing in the process sensitivity list. To enable synthesis of FPGA/CPLD hardware, XST will assume that all necessary signals are present in the sensitivity list. Please note that the result of the synthesis may differ from the initial design specification. The missing signals are:
+   <ps2_data>, <rand>, <fb_data1>
+Entity <FRISoC_top> analyzed. Unit <FRISoC_top> generated.
+
+Analyzing Entity <kcpsm3> in library <work> (Architecture <low_level_definition>).
+    Set user-defined property "INIT =  1" for instance <t_state_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <toggle_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  1" for instance <reset_flop1> in unit <kcpsm3>.
+    Set user-defined property "INIT =  1" for instance <reset_flop2> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <int_capture_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0080" for instance <int_pulse_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <int_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <ack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shadow_carry_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shadow_zero_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  EAAA" for instance <int_update_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  04" for instance <int_value_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <int_enable_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  7400" for instance <move_group_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  5A3C" for instance <condition_met_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  2F" for instance <normal_count_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  1000" for instance <call_type_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  5400" for instance <push_pop_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  D" for instance <valid_move_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  41FC" for instance <flag_type_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <flag_write_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  8" for instance <flag_enable_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0001" for instance <low_zero_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0001" for instance <high_zero_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  3F" for instance <sel_shadow_zero_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <zero_flag_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6996" for instance <low_parity_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6996" for instance <high_parity_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  F3FF" for instance <sel_parity_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  F3" for instance <sel_arith_carry_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  C" for instance <sel_shift_carry_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  3" for instance <sel_shadow_carry_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <carry_flag_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[0].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[0].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[0].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[1].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[1].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[1].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[2].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[2].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[2].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[3].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[3].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[3].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[4].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[4].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[4].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[5].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[5].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[5].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[6].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[6].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[6].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[7].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[7].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[7].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[8].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[8].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[8].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[9].vector_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <pc_loop[9].value_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pc_loop[9].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0145" for instance <register_type_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <register_write_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  8" for instance <register_enable_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[0].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[0].operand_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[1].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[1].operand_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[2].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[2].operand_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[3].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[3].operand_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[4].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[4].operand_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[5].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[5].operand_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[6].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[6].operand_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000" for instance <reg_loop[7].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <reg_loop[7].operand_select_mux> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0400" for instance <memory_type_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <memory_write_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  8000" for instance <memory_enable_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[0].memory_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_loop[0].store_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[1].memory_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_loop[1].store_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[2].memory_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_loop[2].store_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[3].memory_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_loop[3].store_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[4].memory_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_loop[4].store_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[5].memory_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_loop[5].store_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[6].memory_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_loop[6].store_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0000000000000000" for instance <store_loop[7].memory_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <store_loop[7].store_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  FFE2" for instance <sel_logical_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[0].logical_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_loop[0].logical_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[1].logical_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_loop[1].logical_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[2].logical_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_loop[2].logical_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[3].logical_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_loop[3].logical_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[4].logical_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_loop[4].logical_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[5].logical_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_loop[5].logical_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[6].logical_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_loop[6].logical_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6E8A" for instance <logical_loop[7].logical_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <logical_loop[7].logical_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <high_shift_in_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <low_shift_in_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <shift_carry_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <pipeline_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[0].lsb_shift.shift_mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_loop[0].shift_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[1].mid_shift.shift_mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_loop[1].shift_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[2].mid_shift.shift_mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_loop[2].shift_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[3].mid_shift.shift_mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_loop[3].shift_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[4].mid_shift.shift_mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_loop[4].shift_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[5].mid_shift.shift_mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_loop[5].shift_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[6].mid_shift.shift_mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_loop[6].shift_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <shift_loop[7].msb_shift.shift_mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <shift_loop[7].shift_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  1F" for instance <sel_arith_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6C" for instance <arith_loop[0].lsb_arith.arith_carry_in_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[0].arith_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_loop[0].arith_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[1].arith_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_loop[1].arith_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[2].arith_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_loop[2].arith_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[3].arith_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_loop[3].arith_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[4].arith_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_loop[4].arith_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[5].arith_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_loop[5].arith_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[6].arith_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_loop[6].arith_flop> in unit <kcpsm3>.
+WARNING:Xst:1961 - The length of the hex value for the attribute INIT on instance arith_loop[7].msb_arith.arith_carry_out_lut should be 2 bits long. The current value set is 4 bits long.  Value has been truncated
+    Set user-defined property "INIT =  2" for instance <arith_loop[7].msb_arith.arith_carry_out_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_loop[7].msb_arith.arith_carry_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  96" for instance <arith_loop[7].arith_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <arith_loop[7].arith_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0002" for instance <input_fetch_type_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <sel_group_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[0].or_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[0].mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[1].or_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[1].mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[2].or_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[2].mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[3].or_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[3].mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[4].or_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[4].mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[5].or_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[5].mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[6].or_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[6].mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  FE" for instance <alu_mux_loop[7].or_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  E4" for instance <alu_mux_loop[7].mux_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0010" for instance <io_decode_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  4000" for instance <write_active_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <write_strobe_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0100" for instance <read_active_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <read_strobe_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[0].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[0].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[1].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[1].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[2].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[2].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[3].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[3].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[4].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[4].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[5].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[5].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[6].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[6].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[7].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[7].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[8].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[8].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  00000000" for instance <stack_ram_loop[9].stack_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_ram_loop[9].stack_flop> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[0].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  6555" for instance <stack_count_loop[0].lsb_stack_count.count_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[1].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  A999" for instance <stack_count_loop[1].mid_stack_count.count_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[2].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  A999" for instance <stack_count_loop[2].mid_stack_count.count_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[3].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  A999" for instance <stack_count_loop[3].mid_stack_count.count_lut> in unit <kcpsm3>.
+    Set user-defined property "INIT =  0" for instance <stack_count_loop[4].register_bit> in unit <kcpsm3>.
+    Set user-defined property "INIT =  A999" for instance <stack_count_loop[4].msb_stack_count.count_lut> in unit <kcpsm3>.
+Entity <kcpsm3> analyzed. Unit <kcpsm3> generated.
+
+Analyzing Entity <snake> in library <work> (Architecture <low_level_definition>).
+    Set user-defined property "INIT =  00000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INITP_00 =  C2CDC2D72CC0008002D75D40F7FBD37777777530D6CF477D0D4C0377777774FF" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INITP_01 =  0000000000000000000000000000000000000000000000003377748AAA2AAD75" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INITP_02 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INITP_03 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INITP_04 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INITP_05 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INITP_06 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INITP_07 =  C000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_00 =  85014015C5015013487250114875500F4874500D486B0900C001005D006F007D" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_01 =  A04010A0504C4000C02810A0544CA02010B01B601A50401586014015C6014015" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_02 =  504549018201F82000870C01404C542A4C0109018F0154274C020090544C4000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_03 =  83014045C3015043407250414075503F4074503D406B81017010008B1B401A30" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_04 =  544D50004D5A007D40040050CF030075584949074904404584014045C4014045" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_05 =  087407020F02A00054534E00CE0154534000C00154534900C9010E4009FF00FF" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_06 =  0E10A00000870A0300870A020B020C010302040205030602E000007401000201" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_07 =  008B0A000B00A00000870C02507C4C0100904B044A04A00054704E00CE010075" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_08 =  A000CC02CA00CB010C00A000CC02CA00CB01A000547F4B208B01547F4A288A01" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_09 =  0000800118D0549E4D72509D4D75509D4D74509D4D6B4D03A0004C02CA00CB01" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_0A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_0B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_0C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_0D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_0E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_0F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_10 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_11 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_12 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_13 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_14 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_15 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_16 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_17 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_18 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_19 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_1A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_1B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_1C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_1D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_1E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_1F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_20 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_21 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_22 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_23 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_24 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_25 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_26 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_27 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_28 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_29 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_2A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_2B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_2C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_2D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_2E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_2F =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_30 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_31 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_32 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_33 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_34 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_35 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_36 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_37 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_38 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_39 =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_3A =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_3B =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_3C =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_3D =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_3E =  0000000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "INIT_3F =  4094000000000000000000000000000000000000000000000000000000000000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "SRVAL =  00000" for instance <ram_1024_x_18> in unit <snake>.
+    Set user-defined property "WRITE_MODE =  WRITE_FIRST" for instance <ram_1024_x_18> in unit <snake>.
+Entity <snake> analyzed. Unit <snake> generated.
+
+Analyzing generic Entity <topModulePS2> in library <work> (Architecture <Behavioral>).
+	width = 4
+Entity <topModulePS2> analyzed. Unit <topModulePS2> generated.
+
+Analyzing Entity <mealy_control_unit> in library <work> (Architecture <Behavioral>).
+Entity <mealy_control_unit> analyzed. Unit <mealy_control_unit> generated.
+
+Analyzing Entity <shift_register> in library <work> (Architecture <Behavioral>).
+Entity <shift_register> analyzed. Unit <shift_register> generated.
+
+Analyzing Entity <sync_signal> in library <work> (Architecture <Behavioral>).
+Entity <sync_signal> analyzed. Unit <sync_signal> generated.
+
+Analyzing Entity <negfront_detector> in library <work> (Architecture <Behavioral>).
+Entity <negfront_detector> analyzed. Unit <negfront_detector> generated.
+
+Analyzing Entity <seg7> in library <work> (Architecture <Behavioral>).
+Entity <seg7> analyzed. Unit <seg7> generated.
+
+Analyzing Entity <prescaler> in library <work> (Architecture <Behavioral>).
+Entity <prescaler> analyzed. Unit <prescaler> generated.
+
+Analyzing generic Entity <topModuleFrameBuffer> in library <work> (Architecture <Behavioral>).
+	hcount_width = 11
+	vcount_width = 10
+Entity <topModuleFrameBuffer> analyzed. Unit <topModuleFrameBuffer> generated.
+
+Analyzing Entity <RAM32x40> in library <work> (Architecture <Behavioral>).
+WARNING:Xst:790 - "E:/FRI/DN/Seminar/RAM30x40.vhd" line 49: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "E:/FRI/DN/Seminar/RAM30x40.vhd" line 54: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "E:/FRI/DN/Seminar/RAM30x40.vhd" line 54: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "E:/FRI/DN/Seminar/RAM30x40.vhd" line 55: Index value(s) does not match array range, simulation mismatch.
+WARNING:Xst:790 - "E:/FRI/DN/Seminar/RAM30x40.vhd" line 55: Index value(s) does not match array range, simulation mismatch.
+Entity <RAM32x40> analyzed. Unit <RAM32x40> generated.
+
+Analyzing generic Entity <hsync> in library <work> (Architecture <Behavioral>).
+	back_porch = 96
+	column_width = 10
+	display_time = 1280
+	front_porch = 50
+	hcount_width = 11
+	pulse_width = 192
+	scan_time = 1600
+Entity <hsync> analyzed. Unit <hsync> generated.
+
+Analyzing generic Entity <counter.1> in library <work> (Architecture <behavioral>).
+	reset_value = 1599
+	width = 11
+Entity <counter.1> analyzed. Unit <counter.1> generated.
+
+Analyzing generic Entity <vsync> in library <work> (Architecture <Behavioral>).
+	back_porch = 99
+	display_time = 480
+	front_porch = 5
+	pulse_width = 2
+	scan_time = 521
+	vcount_width = 10
+Entity <vsync> analyzed. Unit <vsync> generated.
+
+Analyzing generic Entity <counter.2> in library <work> (Architecture <behavioral>).
+	reset_value = 520
+	width = 10
+Entity <counter.2> analyzed. Unit <counter.2> generated.
+
+Analyzing Entity <randomGen> in library <work> (Architecture <Behavioral>).
+Entity <randomGen> analyzed. Unit <randomGen> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <randomGen>.
+    Related source file is "E:/FRI/DN/Seminar/randomGen.vhd".
+    Found 6-bit register for signal <rand>.
+    Found 1-bit register for signal <temp>.
+    Found 1-bit xor2 for signal <temp$xor0000> created at line 25.
+    Summary:
+	inferred   7 D-type flip-flop(s).
+Unit <randomGen> synthesized.
+
+
+Synthesizing Unit <mealy_control_unit>.
+    Related source file is "E:/FRI/DN/Seminar/mealy_control_unit.vhd".
+    Found finite state machine <FSM_0> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 11                                             |
+    | Transitions        | 23                                             |
+    | Inputs             | 2                                              |
+    | Outputs            | 10                                             |
+    | Clock              | clk_i                     (rising_edge)        |
+    | Reset              | rst_i                     (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | idle                                           |
+    | Power Up State     | idle                                           |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <shr_enable_o>.
+    Found 1-bit register for signal <ready_o>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   2 D-type flip-flop(s).
+Unit <mealy_control_unit> synthesized.
+
+
+Synthesizing Unit <shift_register>.
+    Related source file is "E:/FRI/DN/Seminar/shift_register.vhd".
+    Found 9-bit register for signal <data>.
+    Summary:
+	inferred   9 D-type flip-flop(s).
+Unit <shift_register> synthesized.
+
+
+Synthesizing Unit <sync_signal>.
+    Related source file is "E:/FRI/DN/Seminar/sync_signal.vhd".
+    Found 1-bit register for signal <synced>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <sync_signal> synthesized.
+
+
+Synthesizing Unit <negfront_detector>.
+    Related source file is "E:/FRI/DN/Seminar/negfront_detector.vhd".
+    Found finite state machine <FSM_1> for signal <state>.
+    -----------------------------------------------------------------------
+    | States             | 3                                              |
+    | Transitions        | 5                                              |
+    | Inputs             | 1                                              |
+    | Outputs            | 1                                              |
+    | Clock              | clk_i                     (rising_edge)        |
+    | Reset              | reset_i                   (positive)           |
+    | Reset type         | synchronous                                    |
+    | Reset State        | st0_1hold                                      |
+    | Power Up State     | st0_1hold                                      |
+    | Encoding           | automatic                                      |
+    | Implementation     | LUT                                            |
+    -----------------------------------------------------------------------
+    Found 1-bit register for signal <cenable_o>.
+    Summary:
+	inferred   1 Finite State Machine(s).
+	inferred   1 D-type flip-flop(s).
+Unit <negfront_detector> synthesized.
+
+
+Synthesizing Unit <seg7>.
+    Related source file is "E:/FRI/DN/Seminar/seg7.vhd".
+    Found 16x7-bit ROM for signal <cathode_o>.
+    Found 4-bit register for signal <anode_s>.
+    Found 4-bit register for signal <data>.
+    Summary:
+	inferred   1 ROM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <seg7> synthesized.
+
+
+Synthesizing Unit <prescaler>.
+    Related source file is "E:/FRI/DN/Seminar/prescaler.vhd".
+    Found 1-bit register for signal <enable_o>.
+    Found 17-bit up counter for signal <count>.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 D-type flip-flop(s).
+Unit <prescaler> synthesized.
+
+
+Synthesizing Unit <RAM32x40>.
+    Related source file is "E:/FRI/DN/Seminar/RAM30x40.vhd".
+    Found 2-bit 40-to-1 multiplexer for signal <cellDataOUT>.
+    Found 2-bit 40-to-1 multiplexer for signal <cellDataOUT1>.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0000> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0001> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0002> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0003> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0004> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0005> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0006> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0007> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0008> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0009> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0010> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0011> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0012> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0013> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0014> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0015> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0016> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0017> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0018> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0019> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0020> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0021> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0022> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0023> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0024> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0025> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0026> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0027> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0028> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0029> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0030> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0031> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0032> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0033> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0034> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0035> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0036> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0037> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0038> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT1_0$mux0039> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0000> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0001> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0002> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0003> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0004> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0005> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0006> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0007> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0008> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0009> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0010> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0011> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0012> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0013> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0014> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0015> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0016> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0017> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0018> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0019> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0020> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0021> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0022> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0023> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0024> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0025> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0026> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0027> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0028> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0029> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0030> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0031> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0032> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0033> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0034> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0035> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0036> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0037> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0038> created at line 55.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT1_1$mux0039> created at line 55.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0000> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0001> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0002> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0003> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0004> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0005> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0006> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0007> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0008> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0009> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0010> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0011> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0012> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0013> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0014> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0015> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0016> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0017> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0018> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0019> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0020> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0021> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0022> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0023> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0024> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0025> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0026> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0027> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0028> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0029> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0030> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0031> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0032> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0033> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0034> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0035> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0036> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0037> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0038> created at line 54.
+    Found 1-bit 30-to-1 multiplexer for signal <cellDataOUT_0$mux0039> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0000> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0001> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0002> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0003> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0004> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0005> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0006> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0007> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0008> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0009> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0010> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0011> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0012> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0013> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0014> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0015> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0016> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0017> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0018> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0019> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0020> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0021> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0022> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0023> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0024> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0025> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0026> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0027> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0028> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0029> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0030> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0031> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0032> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0033> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0034> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0035> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0036> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0037> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0038> created at line 54.
+    Found 1-bit 32-to-1 multiplexer for signal <cellDataOUT_1$mux0039> created at line 54.
+    Found 80-bit register for signal <RAM<0>>.
+    Found 80-bit register for signal <RAM<10>>.
+    Found 80-bit register for signal <RAM<11>>.
+    Found 80-bit register for signal <RAM<12>>.
+    Found 80-bit register for signal <RAM<13>>.
+    Found 80-bit register for signal <RAM<14>>.
+    Found 80-bit register for signal <RAM<15>>.
+    Found 80-bit register for signal <RAM<16>>.
+    Found 80-bit register for signal <RAM<17>>.
+    Found 80-bit register for signal <RAM<18>>.
+    Found 80-bit register for signal <RAM<19>>.
+    Found 80-bit register for signal <RAM<1>>.
+    Found 80-bit register for signal <RAM<20>>.
+    Found 80-bit register for signal <RAM<21>>.
+    Found 80-bit register for signal <RAM<22>>.
+    Found 80-bit register for signal <RAM<23>>.
+    Found 80-bit register for signal <RAM<24>>.
+    Found 80-bit register for signal <RAM<25>>.
+    Found 80-bit register for signal <RAM<26>>.
+    Found 80-bit register for signal <RAM<27>>.
+    Found 80-bit register for signal <RAM<28>>.
+    Found 80-bit register for signal <RAM<29>>.
+    Found 80-bit register for signal <RAM<2>>.
+    Found 80-bit register for signal <RAM<3>>.
+    Found 80-bit register for signal <RAM<4>>.
+    Found 80-bit register for signal <RAM<5>>.
+    Found 80-bit register for signal <RAM<6>>.
+    Found 80-bit register for signal <RAM<7>>.
+    Found 80-bit register for signal <RAM<8>>.
+    Found 80-bit register for signal <RAM<9>>.
+    Summary:
+	inferred 2400 D-type flip-flop(s).
+	inferred 164 Multiplexer(s).
+Unit <RAM32x40> synthesized.
+
+
+Synthesizing Unit <counter_1>.
+    Related source file is "E:/FRI/DN/Seminar/counter.vhd".
+    Found 11-bit up counter for signal <count>.
+    Found 12-bit comparator greatequal for signal <count$cmp_ge0000> created at line 32.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Comparator(s).
+Unit <counter_1> synthesized.
+
+
+Synthesizing Unit <counter_2>.
+    Related source file is "E:/FRI/DN/Seminar/counter.vhd".
+    Found 10-bit up counter for signal <count>.
+    Found 11-bit comparator greatequal for signal <count$cmp_ge0000> created at line 32.
+    Summary:
+	inferred   1 Counter(s).
+	inferred   1 Comparator(s).
+Unit <counter_2> synthesized.
+
+
+Synthesizing Unit <kcpsm3>.
+    Related source file is "E:/FRI/DN/Seminar/kcpsm3.vhd".
+Unit <kcpsm3> synthesized.
+
+
+Synthesizing Unit <snake>.
+    Related source file is "E:/FRI/DN/Seminar/SNAKE.VHD".
+Unit <snake> synthesized.
+
+
+Synthesizing Unit <topModulePS2>.
+    Related source file is "E:/FRI/DN/Seminar/topModule.vhd".
+    Found 8-bit register for signal <score>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <topModulePS2> synthesized.
+
+
+Synthesizing Unit <hsync>.
+    Related source file is "E:/FRI/DN/Seminar/hsync.vhd".
+    Found 12-bit comparator less for signal <HDataOn_o$cmp_lt0000> created at line 78.
+    Found 12-bit comparator greater for signal <HSync_o$cmp_gt0000> created at line 67.
+    Found 12-bit comparator less for signal <HSync_o$cmp_lt0000> created at line 67.
+    Summary:
+	inferred   3 Comparator(s).
+Unit <hsync> synthesized.
+
+
+Synthesizing Unit <vsync>.
+    Related source file is "E:/FRI/DN/Seminar/vsync.vhd".
+    Found 11-bit comparator greater for signal <vsync$cmp_gt0000> created at line 92.
+    Found 11-bit comparator less for signal <vsync$cmp_lt0000> created at line 92.
+    Found 11-bit comparator less for signal <vvidon$cmp_lt0000> created at line 104.
+    Summary:
+	inferred   3 Comparator(s).
+Unit <vsync> synthesized.
+
+
+Synthesizing Unit <topModuleFrameBuffer>.
+    Related source file is "E:/FRI/DN/Seminar/topModuleFrameBuffer.vhd".
+Unit <topModuleFrameBuffer> synthesized.
+
+
+Synthesizing Unit <FRISoC_top>.
+    Related source file is "E:/FRI/DN/Seminar/FRISoC_top.vhd".
+    Found 6-bit register for signal <fb_col>.
+    Found 1-bit register for signal <fb_col_sel>.
+    Found 2-bit register for signal <fb_data>.
+    Found 1-bit register for signal <fb_data_sel>.
+    Found 5-bit register for signal <fb_row>.
+    Found 1-bit register for signal <fb_row_sel>.
+    Found 1-bit register for signal <fb_we>.
+    Found 1-bit register for signal <interrupt_signal>.
+    Found 8-bit register for signal <led>.
+    Found 8-bit register for signal <led_reg>.
+    Found 8-bit register for signal <ps2_score>.
+    Found 1-bit register for signal <ps2_sel>.
+    Found 1-bit register for signal <ps2_we>.
+    Found 1-bit register for signal <rnd_sel>.
+    Summary:
+	inferred  45 D-type flip-flop(s).
+Unit <FRISoC_top> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 1231
+ 1-bit register                                        : 21
+ 2-bit register                                        : 1201
+ 4-bit register                                        : 2
+ 5-bit register                                        : 1
+ 6-bit register                                        : 1
+ 8-bit register                                        : 4
+ 9-bit register                                        : 1
+# Comparators                                          : 8
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator greater                             : 1
+ 11-bit comparator less                                : 2
+ 12-bit comparator greatequal                          : 1
+ 12-bit comparator greater                             : 1
+ 12-bit comparator less                                : 2
+# Multiplexers                                         : 164
+ 1-bit 30-to-1 multiplexer                             : 80
+ 1-bit 32-to-1 multiplexer                             : 80
+ 1-bit 40-to-1 multiplexer                             : 4
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+Analyzing FSM <FSM_1> for best encoding.
+Optimizing FSM <ps2/negfront_det/state/FSM> on signal <state[1:3]> with one-hot encoding.
+--------------------------
+ State        | Encoding
+--------------------------
+ st0_1hold    | 001
+ st1_generate | 010
+ st2_0hold    | 100
+--------------------------
+Analyzing FSM <FSM_0> for best encoding.
+Optimizing FSM <ps2/cu/state/FSM> on signal <state[1:4]> with user encoding.
+--------------------
+ State  | Encoding
+--------------------
+ idle   | 0000
+ start  | 0001
+ st0    | 0010
+ st1    | 0011
+ st2    | 0100
+ st3    | 0101
+ st4    | 0110
+ st5    | 0111
+ st6    | 1000
+ st7    | 1001
+ parity | 1010
+--------------------
+
+Synthesizing (advanced) Unit <seg7>.
+INFO:Xst:3034 - In order to maximize performance and save block RAM resources, the small ROM <Mrom_cathode_o> will be implemented on LUT. If you want to force its implementation on block, use option/constraint rom_style.
+Unit <seg7> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# FSMs                                                 : 2
+# ROMs                                                 : 1
+ 16x7-bit ROM                                          : 1
+# Counters                                             : 3
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 17-bit up counter                                     : 1
+# Registers                                            : 2559
+ Flip-Flops                                            : 2559
+# Comparators                                          : 8
+ 11-bit comparator greatequal                          : 1
+ 11-bit comparator greater                             : 1
+ 11-bit comparator less                                : 2
+ 12-bit comparator greatequal                          : 1
+ 12-bit comparator greater                             : 1
+ 12-bit comparator less                                : 2
+# Multiplexers                                         : 164
+ 1-bit 30-to-1 multiplexer                             : 80
+ 1-bit 32-to-1 multiplexer                             : 80
+ 1-bit 40-to-1 multiplexer                             : 4
+# Xors                                                 : 1
+ 1-bit xor2                                            : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <FRISoC_top> ...
+
+Optimizing unit <randomGen> ...
+
+Optimizing unit <mealy_control_unit> ...
+
+Optimizing unit <shift_register> ...
+
+Optimizing unit <seg7> ...
+
+Optimizing unit <RAM32x40> ...
+
+Optimizing unit <kcpsm3> ...
+
+Optimizing unit <topModulePS2> ...
+
+Optimizing unit <topModuleFrameBuffer> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block FRISoC_top, actual ratio is 63.
+FlipFlop fb_row_0 has been replicated 29 time(s)
+FlipFlop fb_row_1 has been replicated 39 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 2671
+ Flip-Flops                                            : 2671
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : FRISoC_top.ngr
+Top Level Output File Name         : FRISoC_top
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 41
+
+Cell Usage :
+# BELS                             : 6545
+#      GND                         : 1
+#      INV                         : 9
+#      LUT1                        : 41
+#      LUT2                        : 1048
+#      LUT2_L                      : 1
+#      LUT3                        : 2630
+#      LUT3_L                      : 41
+#      LUT4                        : 570
+#      LUT4_D                      : 1
+#      LUT4_L                      : 35
+#      MUXCY                       : 89
+#      MUXF5                       : 1297
+#      MUXF6                       : 520
+#      MUXF7                       : 178
+#      MUXF8                       : 8
+#      VCC                         : 1
+#      XORCY                       : 75
+# FlipFlops/Latches                : 2671
+#      FD                          : 31
+#      FDE                         : 2419
+#      FDR                         : 81
+#      FDRE                        : 126
+#      FDRSE                       : 10
+#      FDS                         : 3
+#      FDSE                        : 1
+# RAMS                             : 27
+#      RAM16X1D                    : 8
+#      RAM32X1S                    : 10
+#      RAM64X1S                    : 8
+#      RAMB16_S18                  : 1
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 40
+#      IBUF                        : 3
+#      OBUF                        : 37
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                     3007  out of   4656    64%  
+ Number of Slice Flip Flops:           2671  out of   9312    28%  
+ Number of 4 input LUTs:               4444  out of   9312    47%  
+    Number used as logic:              4376
+    Number used as RAMs:                 68
+ Number of IOs:                          41
+ Number of bonded IOBs:                  41  out of    232    17%  
+ Number of BRAMs:                         1  out of     20     5%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_i                              | BUFGP                  | 2698  |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 12.348ns (Maximum Frequency: 80.983MHz)
+   Minimum input arrival time before clock: 5.123ns
+   Maximum output required time after clock: 14.853ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_i'
+  Clock period: 12.348ns (frequency: 80.983MHz)
+  Total number of paths / destination ports: 47731 / 5543
+-------------------------------------------------------------------------
+Delay:               12.348ns (Levels of Logic = 18)
+  Source:            fb_row_1_1 (FF)
+  Destination:       kcpsm3/zero_flag_flop (FF)
+  Source Clock:      clk_i rising
+  Destination Clock: clk_i rising
+
+  Data Path: fb_row_1_1 to kcpsm3/zero_flag_flop
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q            19   0.514   0.952  fb_row_1_1 (fb_row_1_1)
+     LUT3:I2->O            1   0.612   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_30 (vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_30)
+     MUXF5:I0->O           1   0.278   0.360  vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_28_f5 (vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_28_f5)
+     LUT4_L:I3->LO         1   0.612   0.130  vgaFrameBuffer/ram/row1OUT_i<3>31120 (vgaFrameBuffer/ram/row1OUT_i<3>31120)
+     LUT3:I2->O            1   0.612   0.387  vgaFrameBuffer/ram/row1OUT_i<3>31139 (vgaFrameBuffer/ram/row1OUT_i<3>321)
+     LUT3:I2->O            1   0.612   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_17 (vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_17)
+     MUXF5:I0->O           1   0.278   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_15_f5 (vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_15_f5)
+     MUXF6:I0->O           1   0.451   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_13_f6 (vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_13_f6)
+     MUXF7:I0->O           1   0.451   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_11_f7 (vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_11_f7)
+     MUXF8:I0->O           1   0.451   0.387  vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_9_f8 (vgaFrameBuffer/ram/Mmux_cellDataOUT1<0>_9_f8)
+     LUT4_L:I2->LO         1   0.612   0.103  in_port_signal<0>17 (in_port_signal<0>17)
+     LUT4:I3->O            1   0.612   0.426  in_port_signal<0>86 (in_port_signal<0>)
+     LUT3:I1->O            1   0.612   0.000  kcpsm3/alu_mux_loop[0].mux_lut (kcpsm3/input_group<0>)
+     MUXF5:I1->O           2   0.278   0.532  kcpsm3/alu_mux_loop[0].shift_in_muxf5 (kcpsm3/alu_result<0>)
+     LUT4:I0->O            1   0.612   0.000  kcpsm3/low_zero_lut (kcpsm3/low_zero)
+     MUXCY:S->O            1   0.404   0.000  kcpsm3/low_zero_muxcy (kcpsm3/low_zero_carry)
+     MUXCY:CI->O           1   0.051   0.000  kcpsm3/high_zero_cymux (kcpsm3/high_zero_carry)
+     MUXCY:CI->O           0   0.051   0.000  kcpsm3/zero_cymux (kcpsm3/zero_carry)
+     XORCY:CI->O           1   0.699   0.000  kcpsm3/zero_xor (kcpsm3/zero_fast_route)
+     FDRE:D                    0.268          kcpsm3/zero_flag_flop
+    ----------------------------------------
+    Total                     12.348ns (9.071ns logic, 3.277ns route)
+                                       (73.5% logic, 26.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_i'
+  Total number of paths / destination ports: 194 / 184
+-------------------------------------------------------------------------
+Offset:              5.123ns (Levels of Logic = 3)
+  Source:            rst_i (PAD)
+  Destination:       fb_col_sel (FF)
+  Destination Clock: clk_i rising
+
+  Data Path: rst_i to fb_col_sel
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O           140   1.106   1.132  rst_i_IBUF (rst_i_IBUF)
+     LUT3:I2->O            1   0.612   0.509  fb_col_sel_or00008 (fb_col_sel_or00008)
+     LUT4:I0->O            1   0.612   0.357  fb_col_sel_or000014 (fb_col_sel_or0000)
+     FDR:R                     0.795          fb_col_sel
+    ----------------------------------------
+    Total                      5.123ns (3.125ns logic, 1.998ns route)
+                                       (61.0% logic, 39.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_i'
+  Total number of paths / destination ports: 35497 / 37
+-------------------------------------------------------------------------
+Offset:              14.853ns (Levels of Logic = 15)
+  Source:            vgaFrameBuffer/v/cntr/count_4 (FF)
+  Destination:       color_red_o<1> (PAD)
+  Source Clock:      clk_i rising
+
+  Data Path: vgaFrameBuffer/v/cntr/count_4 to color_red_o<1>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q           925   0.514   1.351  vgaFrameBuffer/v/cntr/count_4 (vgaFrameBuffer/v/cntr/count_4)
+     LUT3:I0->O            1   0.612   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_182 (vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_182)
+     MUXF5:I1->O           1   0.278   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_17_f5_0 (vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_17_f51)
+     MUXF6:I1->O           1   0.451   0.426  vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_16_f6_0 (vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_16_f61)
+     LUT3:I1->O            1   0.612   0.387  vgaFrameBuffer/ram/rowOUT_i<3>3254 (vgaFrameBuffer/ram/rowOUT_i<3>33)
+     LUT3:I2->O            1   0.612   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_9 (vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_9)
+     MUXF5:I1->O           1   0.278   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_8_f5 (vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_8_f5)
+     MUXF6:I1->O           1   0.451   0.000  vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_7_f6 (vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_7_f6)
+     MUXF7:I1->O           1   0.451   0.426  vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_6_f7 (vgaFrameBuffer/ram/Mmux_cellDataOUT<1>_6_f7)
+     LUT4:I1->O            2   0.612   0.449  vgaFrameBuffer/color_green<0>85 (vgaFrameBuffer/color_green<0>85)
+     LUT3:I1->O            1   0.612   0.000  vgaFrameBuffer/color_green<0>139_G (N363)
+     MUXF5:I1->O           1   0.278   0.360  vgaFrameBuffer/color_green<0>139 (vgaFrameBuffer/color_green<0>139)
+     LUT4:I3->O            1   0.612   0.000  vgaFrameBuffer/color_green<0>2471 (vgaFrameBuffer/color_green<0>247)
+     MUXF5:I0->O           6   0.278   0.572  vgaFrameBuffer/color_green<0>247_f5 (color_blue_o_0_OBUF)
+     LUT4:I3->O            3   0.612   0.451  vgaFrameBuffer/color_green<1>65 (color_blue_o_1_OBUF)
+     OBUF:I->O                 3.169          color_red_o_1_OBUF (color_red_o<1>)
+    ----------------------------------------
+    Total                     14.853ns (10.432ns logic, 4.421ns route)
+                                       (70.2% logic, 29.8% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 45.00 secs
+Total CPU time to Xst completion: 45.05 secs
+ 
+--> 
+
+Total memory usage is 393700 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :  119 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+

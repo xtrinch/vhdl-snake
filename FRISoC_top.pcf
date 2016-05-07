@@ -1,0 +1,41 @@
+//! **************************************************************************
+// Written by: Map P.68d on Wed Feb 04 15:44:18 2015
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "kbd_data_o<0>" LOCATE = SITE "J14" LEVEL 1;
+COMP "kbd_data_o<1>" LOCATE = SITE "J15" LEVEL 1;
+COMP "kbd_data_o<2>" LOCATE = SITE "K15" LEVEL 1;
+COMP "kbd_data_o<3>" LOCATE = SITE "K14" LEVEL 1;
+COMP "kbd_data_o<4>" LOCATE = SITE "E17" LEVEL 1;
+COMP "kbd_data_o<5>" LOCATE = SITE "P15" LEVEL 1;
+COMP "kbd_data_o<6>" LOCATE = SITE "F4" LEVEL 1;
+COMP "kbd_data_o<7>" LOCATE = SITE "R4" LEVEL 1;
+COMP "kbddata_i" LOCATE = SITE "P11" LEVEL 1;
+COMP "clk_i" LOCATE = SITE "B8" LEVEL 1;
+COMP "rst_i" LOCATE = SITE "B18" LEVEL 1;
+COMP "hsync_o" LOCATE = SITE "T4" LEVEL 1;
+COMP "anode_o<0>" LOCATE = SITE "F17" LEVEL 1;
+COMP "anode_o<1>" LOCATE = SITE "H17" LEVEL 1;
+COMP "anode_o<2>" LOCATE = SITE "C18" LEVEL 1;
+COMP "anode_o<3>" LOCATE = SITE "F15" LEVEL 1;
+COMP "cathode_o<0>" LOCATE = SITE "L18" LEVEL 1;
+COMP "cathode_o<1>" LOCATE = SITE "F18" LEVEL 1;
+COMP "cathode_o<2>" LOCATE = SITE "D17" LEVEL 1;
+COMP "cathode_o<3>" LOCATE = SITE "D16" LEVEL 1;
+COMP "cathode_o<4>" LOCATE = SITE "G14" LEVEL 1;
+COMP "cathode_o<5>" LOCATE = SITE "J17" LEVEL 1;
+COMP "cathode_o<6>" LOCATE = SITE "H14" LEVEL 1;
+COMP "vsync_o" LOCATE = SITE "U3" LEVEL 1;
+COMP "color_green_o<0>" LOCATE = SITE "N8" LEVEL 1;
+COMP "color_green_o<1>" LOCATE = SITE "P8" LEVEL 1;
+COMP "color_green_o<2>" LOCATE = SITE "P6" LEVEL 1;
+COMP "kbdclk_i" LOCATE = SITE "R12" LEVEL 1;
+COMP "color_blue_o<0>" LOCATE = SITE "U5" LEVEL 1;
+COMP "color_blue_o<1>" LOCATE = SITE "U4" LEVEL 1;
+COMP "color_red_o<0>" LOCATE = SITE "R9" LEVEL 1;
+COMP "color_red_o<1>" LOCATE = SITE "T8" LEVEL 1;
+COMP "color_red_o<2>" LOCATE = SITE "R8" LEVEL 1;
+NET "clk_i_BUFGP/IBUFG" BEL "clk_i_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+SCHEMATIC END;
+

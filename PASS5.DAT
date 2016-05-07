@@ -1,0 +1,2460 @@
+    ADDRESS-000
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; port id's of picoblaze input/output devices
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT column_port_id, 00
+  LOGFORMAT-CONSTANT column_port_id, 00
+INSTRUCTION-CONSTANT
+   OPERAND1-column_port_id
+  OP1 VALUE-column_port_id
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT row_port_id, 01
+  LOGFORMAT-CONSTANT row_port_id, 01
+INSTRUCTION-CONSTANT
+   OPERAND1-row_port_id
+  OP1 VALUE-row_port_id
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT data_port_id, 02
+  LOGFORMAT-CONSTANT data_port_id, 02
+INSTRUCTION-CONSTANT
+   OPERAND1-data_port_id
+  OP1 VALUE-data_port_id
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT ps2_port_id, 03
+  LOGFORMAT-CONSTANT ps2_port_id, 03
+INSTRUCTION-CONSTANT
+   OPERAND1-ps2_port_id
+  OP1 VALUE-ps2_port_id
+   OPERAND2-03
+  OP2 VALUE-03
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT rand_port_id, 04
+  LOGFORMAT-CONSTANT rand_port_id, 04
+INSTRUCTION-CONSTANT
+   OPERAND1-rand_port_id
+  OP1 VALUE-rand_port_id
+   OPERAND2-04
+  OP2 VALUE-04
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; ps2 keycodes
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT keycode_left, 6B
+  LOGFORMAT-CONSTANT keycode_left, 6B
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_left
+  OP1 VALUE-keycode_left
+   OPERAND2-6B
+  OP2 VALUE-6B
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT keycode_right, 74
+  LOGFORMAT-CONSTANT keycode_right, 74
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_right
+  OP1 VALUE-keycode_right
+   OPERAND2-74
+  OP2 VALUE-74
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT keycode_up, 75
+  LOGFORMAT-CONSTANT keycode_up, 75
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_up
+  OP1 VALUE-keycode_up
+   OPERAND2-75
+  OP2 VALUE-75
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT keycode_down, 72
+  LOGFORMAT-CONSTANT keycode_down, 72
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_down
+  OP1 VALUE-keycode_down
+   OPERAND2-72
+  OP2 VALUE-72
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT keycode_enter, 5A
+  LOGFORMAT-CONSTANT keycode_enter, 5A
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_enter
+  OP1 VALUE-keycode_enter
+   OPERAND2-5A
+  OP2 VALUE-5A
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; game constants
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CONSTANT init_snake_len, 02
+  LOGFORMAT-CONSTANT init_snake_len, 02
+INSTRUCTION-CONSTANT
+   OPERAND1-init_snake_len
+  OP1 VALUE-init_snake_len
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; register aliases
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG sA, reg_fb_col
+  LOGFORMAT-NAMEREG sA, reg_fb_col
+INSTRUCTION-NAMEREG
+   OPERAND1-sA
+  OP1 VALUE-sA
+   OPERAND2-reg_fb_col
+  OP2 VALUE-reg_fb_col
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG sB, reg_fb_row
+  LOGFORMAT-NAMEREG sB, reg_fb_row
+INSTRUCTION-NAMEREG
+   OPERAND1-sB
+  OP1 VALUE-sB
+   OPERAND2-reg_fb_row
+  OP2 VALUE-reg_fb_row
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG sC, reg_fb_data
+  LOGFORMAT-NAMEREG sC, reg_fb_data
+INSTRUCTION-NAMEREG
+   OPERAND1-sC
+  OP1 VALUE-sC
+   OPERAND2-reg_fb_data
+  OP2 VALUE-reg_fb_data
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG sD, reg_ps2_data
+  LOGFORMAT-NAMEREG sD, reg_ps2_data
+INSTRUCTION-NAMEREG
+   OPERAND1-sD
+  OP1 VALUE-sD
+   OPERAND2-reg_ps2_data
+  OP2 VALUE-reg_ps2_data
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG sE, reg_counter1
+  LOGFORMAT-NAMEREG sE, reg_counter1
+INSTRUCTION-NAMEREG
+   OPERAND1-sE
+  OP1 VALUE-sE
+   OPERAND2-reg_counter1
+  OP2 VALUE-reg_counter1
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG sF, reg_score
+  LOGFORMAT-NAMEREG sF, reg_score
+INSTRUCTION-NAMEREG
+   OPERAND1-sF
+  OP1 VALUE-sF
+   OPERAND2-reg_score
+  OP2 VALUE-reg_score
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG s9, reg_isfood
+  LOGFORMAT-NAMEREG s9, reg_isfood
+INSTRUCTION-NAMEREG
+   OPERAND1-s9
+  OP1 VALUE-s9
+   OPERAND2-reg_isfood
+  OP2 VALUE-reg_isfood
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG s8, reg_snake_direction
+  LOGFORMAT-NAMEREG s8, reg_snake_direction
+INSTRUCTION-NAMEREG
+   OPERAND1-s8
+  OP1 VALUE-s8
+   OPERAND2-reg_snake_direction
+  OP2 VALUE-reg_snake_direction
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG s7, reg_snake_len
+  LOGFORMAT-NAMEREG s7, reg_snake_len
+INSTRUCTION-NAMEREG
+   OPERAND1-s7
+  OP1 VALUE-s7
+   OPERAND2-reg_snake_len
+  OP2 VALUE-reg_snake_len
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG s6, reg_snake_head_row
+  LOGFORMAT-NAMEREG s6, reg_snake_head_row
+INSTRUCTION-NAMEREG
+   OPERAND1-s6
+  OP1 VALUE-s6
+   OPERAND2-reg_snake_head_row
+  OP2 VALUE-reg_snake_head_row
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG s5, reg_snake_head_col
+  LOGFORMAT-NAMEREG s5, reg_snake_head_col
+INSTRUCTION-NAMEREG
+   OPERAND1-s5
+  OP1 VALUE-s5
+   OPERAND2-reg_snake_head_col
+  OP2 VALUE-reg_snake_head_col
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG s4, reg_snake_tail_row
+  LOGFORMAT-NAMEREG s4, reg_snake_tail_row
+INSTRUCTION-NAMEREG
+   OPERAND1-s4
+  OP1 VALUE-s4
+   OPERAND2-reg_snake_tail_row
+  OP2 VALUE-reg_snake_tail_row
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG s3, reg_snake_tail_col
+  LOGFORMAT-NAMEREG s3, reg_snake_tail_col
+INSTRUCTION-NAMEREG
+   OPERAND1-s3
+  OP1 VALUE-s3
+   OPERAND2-reg_snake_tail_col
+  OP2 VALUE-reg_snake_tail_col
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG s2, reg_ram_index_head
+  LOGFORMAT-NAMEREG s2, reg_ram_index_head
+INSTRUCTION-NAMEREG
+   OPERAND1-s2
+  OP1 VALUE-s2
+   OPERAND2-reg_ram_index_head
+  OP2 VALUE-reg_ram_index_head
+    COMMENT-; head writes the direction its going to this address
+    ADDRESS-000
+      LABEL-
+  FORMATTED-NAMEREG s1, reg_ram_index_tail
+  LOGFORMAT-NAMEREG s1, reg_ram_index_tail
+INSTRUCTION-NAMEREG
+   OPERAND1-s1
+  OP1 VALUE-s1
+   OPERAND2-reg_ram_index_tail
+  OP2 VALUE-reg_ram_index_tail
+    COMMENT-; tail takes the direction and erases
+    ADDRESS-000
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; reset vector - at address 0, program always starts here
+    ADDRESS-000
+      LABEL-
+  FORMATTED-ADDRESS 000
+  LOGFORMAT-ADDRESS 000
+INSTRUCTION-ADDRESS
+   OPERAND1-000
+  OP1 VALUE-000
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-000
+      LABEL-start_game
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-000
+      LABEL-
+  FORMATTED-CALL clear_fb
+  LOGFORMAT-CALL clear_fb[07D]
+INSTRUCTION-CALL
+   OPERAND1-clear_fb
+  OP1 VALUE-07D
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-001
+      LABEL-
+  FORMATTED-CALL load_food
+  LOGFORMAT-CALL load_food[06F]
+INSTRUCTION-CALL
+   OPERAND1-load_food
+  OP1 VALUE-06F
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-002
+      LABEL-
+  FORMATTED-CALL init_snake
+  LOGFORMAT-CALL init_snake[05D]
+INSTRUCTION-CALL
+   OPERAND1-init_snake
+  OP1 VALUE-05D
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-003
+      LABEL-
+  FORMATTED-ENABLE INTERRUPT
+  LOGFORMAT-ENABLE INTERRUPT
+INSTRUCTION-ENABLE
+   OPERAND1-INTERRUPT
+  OP1 VALUE-INTERRUPT
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-004
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; infinite loop until the game is lost
+    ADDRESS-004
+      LABEL-main_game
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-004
+      LABEL-
+  FORMATTED-LOAD reg_isfood, 00
+  LOGFORMAT-LOAD reg_isfood[s9], 00
+INSTRUCTION-LOAD
+   OPERAND1-reg_isfood
+  OP1 VALUE-s9
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-; clear register that tell us whether the pixel is a food pixel
+    ADDRESS-005
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; head insertion
+    ADDRESS-005
+      LABEL-
+  FORMATTED-COMPARE reg_snake_direction, keycode_left
+  LOGFORMAT-COMPARE reg_snake_direction[s8], keycode_left[6B]
+INSTRUCTION-COMPARE
+   OPERAND1-reg_snake_direction
+  OP1 VALUE-s8
+   OPERAND2-keycode_left
+  OP2 VALUE-6B
+    COMMENT-
+    ADDRESS-006
+      LABEL-
+  FORMATTED-JUMP Z, add_to_snake_left
+  LOGFORMAT-JUMP Z, add_to_snake_left[00D]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-add_to_snake_left
+  OP2 VALUE-00D
+    COMMENT-
+    ADDRESS-007
+      LABEL-
+  FORMATTED-COMPARE reg_snake_direction, keycode_right
+  LOGFORMAT-COMPARE reg_snake_direction[s8], keycode_right[74]
+INSTRUCTION-COMPARE
+   OPERAND1-reg_snake_direction
+  OP1 VALUE-s8
+   OPERAND2-keycode_right
+  OP2 VALUE-74
+    COMMENT-
+    ADDRESS-008
+      LABEL-
+  FORMATTED-JUMP Z, add_to_snake_right
+  LOGFORMAT-JUMP Z, add_to_snake_right[00F]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-add_to_snake_right
+  OP2 VALUE-00F
+    COMMENT-
+    ADDRESS-009
+      LABEL-
+  FORMATTED-COMPARE reg_snake_direction, keycode_up
+  LOGFORMAT-COMPARE reg_snake_direction[s8], keycode_up[75]
+INSTRUCTION-COMPARE
+   OPERAND1-reg_snake_direction
+  OP1 VALUE-s8
+   OPERAND2-keycode_up
+  OP2 VALUE-75
+    COMMENT-
+    ADDRESS-00A
+      LABEL-
+  FORMATTED-JUMP Z, add_to_snake_up
+  LOGFORMAT-JUMP Z, add_to_snake_up[011]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-add_to_snake_up
+  OP2 VALUE-011
+    COMMENT-
+    ADDRESS-00B
+      LABEL-
+  FORMATTED-COMPARE reg_snake_direction, keycode_down
+  LOGFORMAT-COMPARE reg_snake_direction[s8], keycode_down[72]
+INSTRUCTION-COMPARE
+   OPERAND1-reg_snake_direction
+  OP1 VALUE-s8
+   OPERAND2-keycode_down
+  OP2 VALUE-72
+    COMMENT-
+    ADDRESS-00C
+      LABEL-
+  FORMATTED-JUMP Z, add_to_snake_down
+  LOGFORMAT-JUMP Z, add_to_snake_down[013]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-add_to_snake_down
+  OP2 VALUE-013
+    COMMENT-
+    ADDRESS-00D
+      LABEL-add_to_snake_left
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-00D
+      LABEL-
+  FORMATTED-SUB reg_snake_head_col, 01
+  LOGFORMAT-SUB reg_snake_head_col[s5], 01
+INSTRUCTION-SUB
+   OPERAND1-reg_snake_head_col
+  OP1 VALUE-s5
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-00E
+      LABEL-
+  FORMATTED-JUMP cont
+  LOGFORMAT-JUMP cont[015]
+INSTRUCTION-JUMP
+   OPERAND1-cont
+  OP1 VALUE-015
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-00F
+      LABEL-add_to_snake_right
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-00F
+      LABEL-
+  FORMATTED-ADD reg_snake_head_col, 01
+  LOGFORMAT-ADD reg_snake_head_col[s5], 01
+INSTRUCTION-ADD
+   OPERAND1-reg_snake_head_col
+  OP1 VALUE-s5
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-010
+      LABEL-
+  FORMATTED-JUMP cont
+  LOGFORMAT-JUMP cont[015]
+INSTRUCTION-JUMP
+   OPERAND1-cont
+  OP1 VALUE-015
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-011
+      LABEL-add_to_snake_up
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-011
+      LABEL-
+  FORMATTED-SUB reg_snake_head_row, 01
+  LOGFORMAT-SUB reg_snake_head_row[s6], 01
+INSTRUCTION-SUB
+   OPERAND1-reg_snake_head_row
+  OP1 VALUE-s6
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-012
+      LABEL-
+  FORMATTED-JUMP cont
+  LOGFORMAT-JUMP cont[015]
+INSTRUCTION-JUMP
+   OPERAND1-cont
+  OP1 VALUE-015
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-013
+      LABEL-add_to_snake_down
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-013
+      LABEL-
+  FORMATTED-ADD reg_snake_head_row, 01
+  LOGFORMAT-ADD reg_snake_head_row[s6], 01
+INSTRUCTION-ADD
+   OPERAND1-reg_snake_head_row
+  OP1 VALUE-s6
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-014
+      LABEL-
+  FORMATTED-JUMP cont
+  LOGFORMAT-JUMP cont[015]
+INSTRUCTION-JUMP
+   OPERAND1-cont
+  OP1 VALUE-015
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-015
+      LABEL-cont
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-015
+      LABEL-
+  FORMATTED-LOAD reg_fb_col, reg_snake_head_col
+  LOGFORMAT-LOAD reg_fb_col[sA], reg_snake_head_col[s5]
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-reg_snake_head_col
+  OP2 VALUE-s5
+    COMMENT-
+    ADDRESS-016
+      LABEL-
+  FORMATTED-LOAD reg_fb_row, reg_snake_head_row
+  LOGFORMAT-LOAD reg_fb_row[sB], reg_snake_head_row[s6]
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-reg_snake_head_row
+  OP2 VALUE-s6
+    COMMENT-
+    ADDRESS-017
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; check if within the bounds of our screen
+    ADDRESS-017
+      LABEL-
+  FORMATTED-LOAD s0, reg_fb_row
+  LOGFORMAT-LOAD s0, reg_fb_row[sB]
+INSTRUCTION-LOAD
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-reg_fb_row
+  OP2 VALUE-sB
+    COMMENT-
+    ADDRESS-018
+      LABEL-
+  FORMATTED-AND s0, 20
+  LOGFORMAT-AND s0, 20
+INSTRUCTION-AND
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-20
+  OP2 VALUE-20
+    COMMENT-
+    ADDRESS-019
+      LABEL-
+  FORMATTED-JUMP NZ, end_game
+  LOGFORMAT-JUMP NZ, end_game[04C]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-end_game
+  OP2 VALUE-04C
+    COMMENT-
+    ADDRESS-01A
+      LABEL-
+  FORMATTED-LOAD s0, reg_fb_col
+  LOGFORMAT-LOAD s0, reg_fb_col[sA]
+INSTRUCTION-LOAD
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-reg_fb_col
+  OP2 VALUE-sA
+    COMMENT-
+    ADDRESS-01B
+      LABEL-
+  FORMATTED-SUB s0, 28
+  LOGFORMAT-SUB s0, 28
+INSTRUCTION-SUB
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-28
+  OP2 VALUE-28
+    COMMENT-
+    ADDRESS-01C
+      LABEL-
+  FORMATTED-COMPARE s0, 00
+  LOGFORMAT-COMPARE s0, 00
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-01D
+      LABEL-
+  FORMATTED-JUMP Z, end_game
+  LOGFORMAT-JUMP Z, end_game[04C]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-end_game
+  OP2 VALUE-04C
+    COMMENT-
+    ADDRESS-01E
+      LABEL-
+  FORMATTED-LOAD s0, reg_fb_col
+  LOGFORMAT-LOAD s0, reg_fb_col[sA]
+INSTRUCTION-LOAD
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-reg_fb_col
+  OP2 VALUE-sA
+    COMMENT-
+    ADDRESS-01F
+      LABEL-
+  FORMATTED-AND s0, 40
+  LOGFORMAT-AND s0, 40
+INSTRUCTION-AND
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-40
+  OP2 VALUE-40
+    COMMENT-
+    ADDRESS-020
+      LABEL-
+  FORMATTED-COMPARE s0, 00
+  LOGFORMAT-COMPARE s0, 00
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-021
+      LABEL-
+  FORMATTED-JUMP NZ, end_game
+  LOGFORMAT-JUMP NZ, end_game[04C]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-end_game
+  OP2 VALUE-04C
+    COMMENT-
+    ADDRESS-022
+      LABEL-
+  FORMATTED-CALL fb_read
+  LOGFORMAT-CALL fb_read[090]
+INSTRUCTION-CALL
+   OPERAND1-fb_read
+  OP1 VALUE-090
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-023
+      LABEL-
+  FORMATTED-COMPARE reg_fb_data, 02
+  LOGFORMAT-COMPARE reg_fb_data[sC], 02
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-; is read pixel a food pixel?
+    ADDRESS-024
+      LABEL-
+  FORMATTED-JUMP NZ, cont2
+  LOGFORMAT-JUMP NZ, cont2[027]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-cont2
+  OP2 VALUE-027
+    COMMENT-
+    ADDRESS-025
+      LABEL-
+  FORMATTED-ADD reg_score, 01
+  LOGFORMAT-ADD reg_score[sF], 01
+INSTRUCTION-ADD
+   OPERAND1-reg_score
+  OP1 VALUE-sF
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-026
+      LABEL-
+  FORMATTED-LOAD reg_isfood, 01
+  LOGFORMAT-LOAD reg_isfood[s9], 01
+INSTRUCTION-LOAD
+   OPERAND1-reg_isfood
+  OP1 VALUE-s9
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-027
+      LABEL-cont2
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-027
+      LABEL-
+  FORMATTED-COMPARE reg_fb_data, 01
+  LOGFORMAT-COMPARE reg_fb_data[sC], 01
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-; is read pixel snake?
+    ADDRESS-028
+      LABEL-
+  FORMATTED-JUMP NZ, cont4
+  LOGFORMAT-JUMP NZ, cont4[02A]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-cont4
+  OP2 VALUE-02A
+    COMMENT-
+    ADDRESS-029
+      LABEL-
+  FORMATTED-JUMP end_game
+  LOGFORMAT-JUMP end_game[04C]
+INSTRUCTION-JUMP
+   OPERAND1-end_game
+  OP1 VALUE-04C
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; end game
+    ADDRESS-02A
+      LABEL-cont4
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-02A
+      LABEL-
+  FORMATTED-LOAD reg_fb_data, 01
+  LOGFORMAT-LOAD reg_fb_data[sC], 01
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-; code for snake pixel is 01
+    ADDRESS-02B
+      LABEL-
+  FORMATTED-CALL fb_insert
+  LOGFORMAT-CALL fb_insert[087]
+INSTRUCTION-CALL
+   OPERAND1-fb_insert
+  OP1 VALUE-087
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-02C
+      LABEL-
+  FORMATTED-STORE reg_snake_direction, (reg_ram_index_head)
+  LOGFORMAT-STORE reg_snake_direction[s8], (reg_ram_index_head)[(s2)]
+INSTRUCTION-STORE
+   OPERAND1-reg_snake_direction
+  OP1 VALUE-s8
+   OPERAND2-(reg_ram_index_head)
+  OP2 VALUE-(s2)
+    COMMENT-; store the direction we went into scratchpad ram
+    ADDRESS-02D
+      LABEL-
+  FORMATTED-ADD reg_ram_index_head, 01
+  LOGFORMAT-ADD reg_ram_index_head[s2], 01
+INSTRUCTION-ADD
+   OPERAND1-reg_ram_index_head
+  OP1 VALUE-s2
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-02E
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; tail removal
+    ADDRESS-02E
+      LABEL-
+  FORMATTED-COMPARE reg_isfood, 01
+  LOGFORMAT-COMPARE reg_isfood[s9], 01
+INSTRUCTION-COMPARE
+   OPERAND1-reg_isfood
+  OP1 VALUE-s9
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-; if we ate food, don't remove anything
+    ADDRESS-02F
+      LABEL-
+  FORMATTED-JUMP Z, cont3
+  LOGFORMAT-JUMP Z, cont3[045]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-cont3
+  OP2 VALUE-045
+    COMMENT-
+    ADDRESS-030
+      LABEL-
+  FORMATTED-LOAD reg_fb_col, reg_snake_tail_col
+  LOGFORMAT-LOAD reg_fb_col[sA], reg_snake_tail_col[s3]
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-reg_snake_tail_col
+  OP2 VALUE-s3
+    COMMENT-
+    ADDRESS-031
+      LABEL-
+  FORMATTED-LOAD reg_fb_row, reg_snake_tail_row
+  LOGFORMAT-LOAD reg_fb_row[sB], reg_snake_tail_row[s4]
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-reg_snake_tail_row
+  OP2 VALUE-s4
+    COMMENT-
+    ADDRESS-032
+      LABEL-
+  FORMATTED-CALL fb_remove
+  LOGFORMAT-CALL fb_remove[08B]
+INSTRUCTION-CALL
+   OPERAND1-fb_remove
+  OP1 VALUE-08B
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-033
+      LABEL-
+  FORMATTED-FETCH s0, (reg_ram_index_tail)
+  LOGFORMAT-FETCH s0, (reg_ram_index_tail)[(s1)]
+INSTRUCTION-FETCH
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-(reg_ram_index_tail)
+  OP2 VALUE-(s1)
+    COMMENT-; fetch direction to remove next from rom
+    ADDRESS-034
+      LABEL-
+  FORMATTED-ADD reg_ram_index_tail, 01
+  LOGFORMAT-ADD reg_ram_index_tail[s1], 01
+INSTRUCTION-ADD
+   OPERAND1-reg_ram_index_tail
+  OP1 VALUE-s1
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-035
+      LABEL-
+  FORMATTED-COMPARE s0, keycode_left
+  LOGFORMAT-COMPARE s0, keycode_left[6B]
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-keycode_left
+  OP2 VALUE-6B
+    COMMENT-
+    ADDRESS-036
+      LABEL-
+  FORMATTED-JUMP Z, remove_from_snake_left
+  LOGFORMAT-JUMP Z, remove_from_snake_left[03D]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-remove_from_snake_left
+  OP2 VALUE-03D
+    COMMENT-
+    ADDRESS-037
+      LABEL-
+  FORMATTED-COMPARE s0, keycode_right
+  LOGFORMAT-COMPARE s0, keycode_right[74]
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-keycode_right
+  OP2 VALUE-74
+    COMMENT-
+    ADDRESS-038
+      LABEL-
+  FORMATTED-JUMP Z, remove_from_snake_right
+  LOGFORMAT-JUMP Z, remove_from_snake_right[03F]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-remove_from_snake_right
+  OP2 VALUE-03F
+    COMMENT-
+    ADDRESS-039
+      LABEL-
+  FORMATTED-COMPARE s0, keycode_up
+  LOGFORMAT-COMPARE s0, keycode_up[75]
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-keycode_up
+  OP2 VALUE-75
+    COMMENT-
+    ADDRESS-03A
+      LABEL-
+  FORMATTED-JUMP Z, remove_from_snake_up
+  LOGFORMAT-JUMP Z, remove_from_snake_up[041]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-remove_from_snake_up
+  OP2 VALUE-041
+    COMMENT-
+    ADDRESS-03B
+      LABEL-
+  FORMATTED-COMPARE s0, keycode_down
+  LOGFORMAT-COMPARE s0, keycode_down[72]
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-keycode_down
+  OP2 VALUE-72
+    COMMENT-
+    ADDRESS-03C
+      LABEL-
+  FORMATTED-JUMP Z, remove_from_snake_down
+  LOGFORMAT-JUMP Z, remove_from_snake_down[043]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-remove_from_snake_down
+  OP2 VALUE-043
+    COMMENT-
+    ADDRESS-03D
+      LABEL-remove_from_snake_left
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-03D
+      LABEL-
+  FORMATTED-SUB reg_snake_tail_col, 01
+  LOGFORMAT-SUB reg_snake_tail_col[s3], 01
+INSTRUCTION-SUB
+   OPERAND1-reg_snake_tail_col
+  OP1 VALUE-s3
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-03E
+      LABEL-
+  FORMATTED-JUMP cont1
+  LOGFORMAT-JUMP cont1[045]
+INSTRUCTION-JUMP
+   OPERAND1-cont1
+  OP1 VALUE-045
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-03F
+      LABEL-remove_from_snake_right
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-03F
+      LABEL-
+  FORMATTED-ADD reg_snake_tail_col, 01
+  LOGFORMAT-ADD reg_snake_tail_col[s3], 01
+INSTRUCTION-ADD
+   OPERAND1-reg_snake_tail_col
+  OP1 VALUE-s3
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-040
+      LABEL-
+  FORMATTED-JUMP cont1
+  LOGFORMAT-JUMP cont1[045]
+INSTRUCTION-JUMP
+   OPERAND1-cont1
+  OP1 VALUE-045
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-041
+      LABEL-remove_from_snake_up
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-041
+      LABEL-
+  FORMATTED-SUB reg_snake_tail_row, 01
+  LOGFORMAT-SUB reg_snake_tail_row[s4], 01
+INSTRUCTION-SUB
+   OPERAND1-reg_snake_tail_row
+  OP1 VALUE-s4
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-042
+      LABEL-
+  FORMATTED-JUMP cont1
+  LOGFORMAT-JUMP cont1[045]
+INSTRUCTION-JUMP
+   OPERAND1-cont1
+  OP1 VALUE-045
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-043
+      LABEL-remove_from_snake_down
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-043
+      LABEL-
+  FORMATTED-ADD reg_snake_tail_row, 01
+  LOGFORMAT-ADD reg_snake_tail_row[s4], 01
+INSTRUCTION-ADD
+   OPERAND1-reg_snake_tail_row
+  OP1 VALUE-s4
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-044
+      LABEL-
+  FORMATTED-JUMP cont1
+  LOGFORMAT-JUMP cont1[045]
+INSTRUCTION-JUMP
+   OPERAND1-cont1
+  OP1 VALUE-045
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-045
+      LABEL-cont1
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-045
+      LABEL-cont3
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-045
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; randomly add food (or not add)
+    ADDRESS-045
+      LABEL-
+  FORMATTED-INPUT reg_isfood, rand_port_id
+  LOGFORMAT-INPUT reg_isfood[s9], rand_port_id[04]
+INSTRUCTION-INPUT
+   OPERAND1-reg_isfood
+  OP1 VALUE-s9
+   OPERAND2-rand_port_id
+  OP2 VALUE-04
+    COMMENT-
+    ADDRESS-046
+      LABEL-
+  FORMATTED-COMPARE reg_isfood, 07
+  LOGFORMAT-COMPARE reg_isfood[s9], 07
+INSTRUCTION-COMPARE
+   OPERAND1-reg_isfood
+  OP1 VALUE-s9
+   OPERAND2-07
+  OP2 VALUE-07
+    COMMENT-; compare with 10 (dec), because a third of the time the input will be smaller (random number from 0-30)
+    ADDRESS-047
+      LABEL-
+  FORMATTED-JUMP C, cont5
+  LOGFORMAT-JUMP C, cont5[049]
+INSTRUCTION-JUMP
+   OPERAND1-C
+  OP1 VALUE-C
+   OPERAND2-cont5
+  OP2 VALUE-049
+    COMMENT-
+    ADDRESS-048
+      LABEL-
+  FORMATTED-CALL food_insert
+  LOGFORMAT-CALL food_insert[075]
+INSTRUCTION-CALL
+   OPERAND1-food_insert
+  OP1 VALUE-075
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-049
+      LABEL-cont5
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-049
+      LABEL-
+  FORMATTED-OUTPUT reg_score, ps2_port_id
+  LOGFORMAT-OUTPUT reg_score[sF], ps2_port_id[03]
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_score
+  OP1 VALUE-sF
+   OPERAND2-ps2_port_id
+  OP2 VALUE-03
+    COMMENT-
+    ADDRESS-04A
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; output score
+    ADDRESS-04A
+      LABEL-
+  FORMATTED-CALL delay
+  LOGFORMAT-CALL delay[050]
+INSTRUCTION-CALL
+   OPERAND1-delay
+  OP1 VALUE-050
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-04B
+      LABEL-
+  FORMATTED-JUMP main_game
+  LOGFORMAT-JUMP main_game[004]
+INSTRUCTION-JUMP
+   OPERAND1-main_game
+  OP1 VALUE-004
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-04C
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; routine that clears the screen and waits for input - enter for another game
+    ADDRESS-04C
+      LABEL-end_game
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-04C
+      LABEL-
+  FORMATTED-CALL clear_fb
+  LOGFORMAT-CALL clear_fb[07D]
+INSTRUCTION-CALL
+   OPERAND1-clear_fb
+  OP1 VALUE-07D
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-04D
+      LABEL-another_game
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-04D
+      LABEL-
+  FORMATTED-COMPARE reg_ps2_data, keycode_enter
+  LOGFORMAT-COMPARE reg_ps2_data[sD], keycode_enter[5A]
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+  OP1 VALUE-sD
+   OPERAND2-keycode_enter
+  OP2 VALUE-5A
+    COMMENT-
+    ADDRESS-04E
+      LABEL-
+  FORMATTED-JUMP Z, start_game
+  LOGFORMAT-JUMP Z, start_game[000]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-start_game
+  OP2 VALUE-000
+    COMMENT-
+    ADDRESS-04F
+      LABEL-
+  FORMATTED-JUMP NZ, another_game
+  LOGFORMAT-JUMP NZ, another_game[04D]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-another_game
+  OP2 VALUE-04D
+    COMMENT-
+    ADDRESS-050
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; 1s delay
+    ADDRESS-050
+      LABEL-delay
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-050
+      LABEL-
+  FORMATTED-LOAD s0, FF
+  LOGFORMAT-LOAD s0, FF
+INSTRUCTION-LOAD
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-FF
+  OP2 VALUE-FF
+    COMMENT-
+    ADDRESS-051
+      LABEL-
+  FORMATTED-LOAD reg_isfood, FF
+  LOGFORMAT-LOAD reg_isfood[s9], FF
+INSTRUCTION-LOAD
+   OPERAND1-reg_isfood
+  OP1 VALUE-s9
+   OPERAND2-FF
+  OP2 VALUE-FF
+    COMMENT-
+    ADDRESS-052
+      LABEL-
+  FORMATTED-LOAD reg_counter1, 40
+  LOGFORMAT-LOAD reg_counter1[sE], 40
+INSTRUCTION-LOAD
+   OPERAND1-reg_counter1
+  OP1 VALUE-sE
+   OPERAND2-40
+  OP2 VALUE-40
+    COMMENT-; 7f - 128 (1s) ; 40 - 64 (0.5s)
+    ADDRESS-053
+      LABEL-delayloop0
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-053
+      LABEL-delayloop1
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-053
+      LABEL-delayloop2
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-053
+      LABEL-
+  FORMATTED-SUB reg_isfood, 01
+  LOGFORMAT-SUB reg_isfood[s9], 01
+INSTRUCTION-SUB
+   OPERAND1-reg_isfood
+  OP1 VALUE-s9
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-054
+      LABEL-
+  FORMATTED-COMPARE reg_isfood, 00
+  LOGFORMAT-COMPARE reg_isfood[s9], 00
+INSTRUCTION-COMPARE
+   OPERAND1-reg_isfood
+  OP1 VALUE-s9
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-055
+      LABEL-
+  FORMATTED-JUMP NZ, delayloop2
+  LOGFORMAT-JUMP NZ, delayloop2[053]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-delayloop2
+  OP2 VALUE-053
+    COMMENT-
+    ADDRESS-056
+      LABEL-
+  FORMATTED-SUB s0, 01
+  LOGFORMAT-SUB s0, 01
+INSTRUCTION-SUB
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-057
+      LABEL-
+  FORMATTED-COMPARE s0, 00
+  LOGFORMAT-COMPARE s0, 00
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-058
+      LABEL-
+  FORMATTED-JUMP NZ, delayloop1
+  LOGFORMAT-JUMP NZ, delayloop1[053]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-delayloop1
+  OP2 VALUE-053
+    COMMENT-
+    ADDRESS-059
+      LABEL-
+  FORMATTED-SUB reg_counter1, 01
+  LOGFORMAT-SUB reg_counter1[sE], 01
+INSTRUCTION-SUB
+   OPERAND1-reg_counter1
+  OP1 VALUE-sE
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-05A
+      LABEL-
+  FORMATTED-COMPARE reg_counter1, 00
+  LOGFORMAT-COMPARE reg_counter1[sE], 00
+INSTRUCTION-COMPARE
+   OPERAND1-reg_counter1
+  OP1 VALUE-sE
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-05B
+      LABEL-
+  FORMATTED-JUMP NZ, delayloop0
+  LOGFORMAT-JUMP NZ, delayloop0[053]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-delayloop0
+  OP2 VALUE-053
+    COMMENT-
+    ADDRESS-05C
+      LABEL-
+  FORMATTED-RETURN
+  LOGFORMAT-RETURN
+INSTRUCTION-RETURN
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-05D
+      LABEL-init_snake
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-05D
+      LABEL-
+  FORMATTED-LOAD reg_score, 02
+  LOGFORMAT-LOAD reg_score[sF], 02
+INSTRUCTION-LOAD
+   OPERAND1-reg_score
+  OP1 VALUE-sF
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-05E
+      LABEL-
+  FORMATTED-LOAD reg_snake_len, init_snake_len
+  LOGFORMAT-LOAD reg_snake_len[s7], init_snake_len[02]
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_len
+  OP1 VALUE-s7
+   OPERAND2-init_snake_len
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-05F
+      LABEL-
+  FORMATTED-LOAD reg_snake_direction, keycode_right
+  LOGFORMAT-LOAD reg_snake_direction[s8], keycode_right[74]
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_direction
+  OP1 VALUE-s8
+   OPERAND2-keycode_right
+  OP2 VALUE-74
+    COMMENT-
+    ADDRESS-060
+      LABEL-
+  FORMATTED-LOAD reg_ram_index_head, 01
+  LOGFORMAT-LOAD reg_ram_index_head[s2], 01
+INSTRUCTION-LOAD
+   OPERAND1-reg_ram_index_head
+  OP1 VALUE-s2
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-061
+      LABEL-
+  FORMATTED-LOAD reg_ram_index_tail, 00
+  LOGFORMAT-LOAD reg_ram_index_tail[s1], 00
+INSTRUCTION-LOAD
+   OPERAND1-reg_ram_index_tail
+  OP1 VALUE-s1
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-062
+      LABEL-
+  FORMATTED-LOAD s0, keycode_right
+  LOGFORMAT-LOAD s0, keycode_right[74]
+INSTRUCTION-LOAD
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-keycode_right
+  OP2 VALUE-74
+    COMMENT-; load direction to remove next
+    ADDRESS-063
+      LABEL-
+  FORMATTED-STORE s0, 00
+  LOGFORMAT-STORE s0, 00
+INSTRUCTION-STORE
+   OPERAND1-s0
+  OP1 VALUE-s0
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-; store direction to remove next
+    ADDRESS-064
+      LABEL-
+  FORMATTED-LOAD reg_snake_head_row, 02
+  LOGFORMAT-LOAD reg_snake_head_row[s6], 02
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_head_row
+  OP1 VALUE-s6
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-; snake head row
+    ADDRESS-065
+      LABEL-
+  FORMATTED-LOAD reg_snake_head_col, 03
+  LOGFORMAT-LOAD reg_snake_head_col[s5], 03
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_head_col
+  OP1 VALUE-s5
+   OPERAND2-03
+  OP2 VALUE-03
+    COMMENT-; snake head col
+    ADDRESS-066
+      LABEL-
+  FORMATTED-LOAD reg_snake_tail_row, 02
+  LOGFORMAT-LOAD reg_snake_tail_row[s4], 02
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_tail_row
+  OP1 VALUE-s4
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-; snake tail row
+    ADDRESS-067
+      LABEL-
+  FORMATTED-LOAD reg_snake_tail_col, 02
+  LOGFORMAT-LOAD reg_snake_tail_col[s3], 02
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_tail_col
+  OP1 VALUE-s3
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-; snake tail col
+    ADDRESS-068
+      LABEL-
+  FORMATTED-LOAD reg_fb_data, 01
+  LOGFORMAT-LOAD reg_fb_data[sC], 01
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-069
+      LABEL-
+  FORMATTED-LOAD reg_fb_row, 02
+  LOGFORMAT-LOAD reg_fb_row[sB], 02
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-06A
+      LABEL-
+  FORMATTED-LOAD reg_fb_col, 02
+  LOGFORMAT-LOAD reg_fb_col[sA], 02
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-06B
+      LABEL-
+  FORMATTED-CALL fb_insert
+  LOGFORMAT-CALL fb_insert[087]
+INSTRUCTION-CALL
+   OPERAND1-fb_insert
+  OP1 VALUE-087
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-06C
+      LABEL-
+  FORMATTED-LOAD reg_fb_col, 03
+  LOGFORMAT-LOAD reg_fb_col[sA], 03
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-03
+  OP2 VALUE-03
+    COMMENT-
+    ADDRESS-06D
+      LABEL-
+  FORMATTED-CALL fb_insert
+  LOGFORMAT-CALL fb_insert[087]
+INSTRUCTION-CALL
+   OPERAND1-fb_insert
+  OP1 VALUE-087
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-06E
+      LABEL-
+  FORMATTED-RETURN
+  LOGFORMAT-RETURN
+INSTRUCTION-RETURN
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-06F
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; insert all the initial food
+    ADDRESS-06F
+      LABEL-load_food
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-06F
+      LABEL-
+  FORMATTED-LOAD reg_counter1, 10
+  LOGFORMAT-LOAD reg_counter1[sE], 10
+INSTRUCTION-LOAD
+   OPERAND1-reg_counter1
+  OP1 VALUE-sE
+   OPERAND2-10
+  OP2 VALUE-10
+    COMMENT-
+    ADDRESS-070
+      LABEL-food_loop
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-070
+      LABEL-
+  FORMATTED-CALL food_insert
+  LOGFORMAT-CALL food_insert[075]
+INSTRUCTION-CALL
+   OPERAND1-food_insert
+  OP1 VALUE-075
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-071
+      LABEL-
+  FORMATTED-SUB reg_counter1, 01
+  LOGFORMAT-SUB reg_counter1[sE], 01
+INSTRUCTION-SUB
+   OPERAND1-reg_counter1
+  OP1 VALUE-sE
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-072
+      LABEL-
+  FORMATTED-COMPARE reg_counter1, 00
+  LOGFORMAT-COMPARE reg_counter1[sE], 00
+INSTRUCTION-COMPARE
+   OPERAND1-reg_counter1
+  OP1 VALUE-sE
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-073
+      LABEL-
+  FORMATTED-JUMP NZ, food_loop
+  LOGFORMAT-JUMP NZ, food_loop[070]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-food_loop
+  OP2 VALUE-070
+    COMMENT-
+    ADDRESS-074
+      LABEL-
+  FORMATTED-RETURN
+  LOGFORMAT-RETURN
+INSTRUCTION-RETURN
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-075
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; insert food at a random location : request two random numbers, insert 10 at location
+    ADDRESS-075
+      LABEL-food_insert
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-075
+      LABEL-
+  FORMATTED-INPUT reg_fb_col, rand_port_id
+  LOGFORMAT-INPUT reg_fb_col[sA], rand_port_id[04]
+INSTRUCTION-INPUT
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-rand_port_id
+  OP2 VALUE-04
+    COMMENT-
+    ADDRESS-076
+      LABEL-
+  FORMATTED-INPUT reg_fb_row, rand_port_id
+  LOGFORMAT-INPUT reg_fb_row[sB], rand_port_id[04]
+INSTRUCTION-INPUT
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-rand_port_id
+  OP2 VALUE-04
+    COMMENT-
+    ADDRESS-077
+      LABEL-
+  FORMATTED-CALL fb_read
+  LOGFORMAT-CALL fb_read[090]
+INSTRUCTION-CALL
+   OPERAND1-fb_read
+  OP1 VALUE-090
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; read pixel at wanted location to check if the snake is already occupying it
+    ADDRESS-078
+      LABEL-
+  FORMATTED-COMPARE reg_fb_data, 01
+  LOGFORMAT-COMPARE reg_fb_data[sC], 01
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-; is read pixel a snake pixel?
+    ADDRESS-079
+      LABEL-
+  FORMATTED-JUMP Z, skipfood
+  LOGFORMAT-JUMP Z, skipfood[07C]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-skipfood
+  OP2 VALUE-07C
+    COMMENT-
+    ADDRESS-07A
+      LABEL-
+  FORMATTED-LOAD reg_fb_data, 02
+  LOGFORMAT-LOAD reg_fb_data[sC], 02
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-02
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-07B
+      LABEL-
+  FORMATTED-CALL fb_insert
+  LOGFORMAT-CALL fb_insert[087]
+INSTRUCTION-CALL
+   OPERAND1-fb_insert
+  OP1 VALUE-087
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-07C
+      LABEL-skipfood
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-07C
+      LABEL-
+  FORMATTED-RETURN
+  LOGFORMAT-RETURN
+INSTRUCTION-RETURN
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-07D
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; clear ROM to all 0
+    ADDRESS-07D
+      LABEL-clear_fb
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-07D
+      LABEL-
+  FORMATTED-LOAD reg_fb_row, 00
+  LOGFORMAT-LOAD reg_fb_row[sB], 00
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-; outer loop counter
+    ADDRESS-07E
+      LABEL-
+  FORMATTED-LOAD reg_fb_col, 00
+  LOGFORMAT-LOAD reg_fb_col[sA], 00
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-; inner loop counter
+    ADDRESS-07F
+      LABEL-clear_outer_loop
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-07F
+      LABEL-clear_inner_loop
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-07F
+      LABEL-
+  FORMATTED-CALL fb_remove
+  LOGFORMAT-CALL fb_remove[08B]
+INSTRUCTION-CALL
+   OPERAND1-fb_remove
+  OP1 VALUE-08B
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-080
+      LABEL-
+  FORMATTED-ADD reg_fb_col, 01
+  LOGFORMAT-ADD reg_fb_col[sA], 01
+INSTRUCTION-ADD
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-081
+      LABEL-
+  FORMATTED-COMPARE reg_fb_col, 28
+  LOGFORMAT-COMPARE reg_fb_col[sA], 28
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-28
+  OP2 VALUE-28
+    COMMENT-; decimal 40
+    ADDRESS-082
+      LABEL-
+  FORMATTED-JUMP NZ, clear_inner_loop
+  LOGFORMAT-JUMP NZ, clear_inner_loop[07F]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-clear_inner_loop
+  OP2 VALUE-07F
+    COMMENT-
+    ADDRESS-083
+      LABEL-
+  FORMATTED-ADD reg_fb_row, 01
+  LOGFORMAT-ADD reg_fb_row[sB], 01
+INSTRUCTION-ADD
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-01
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-084
+      LABEL-
+  FORMATTED-COMPARE reg_fb_row, 20
+  LOGFORMAT-COMPARE reg_fb_row[sB], 20
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-20
+  OP2 VALUE-20
+    COMMENT-; decimal 32
+    ADDRESS-085
+      LABEL-
+  FORMATTED-JUMP NZ, clear_outer_loop
+  LOGFORMAT-JUMP NZ, clear_outer_loop[07F]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-clear_outer_loop
+  OP2 VALUE-07F
+    COMMENT-
+    ADDRESS-086
+      LABEL-
+  FORMATTED-RETURN
+  LOGFORMAT-RETURN
+INSTRUCTION-RETURN
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-087
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; frame buffer insert / remove routines
+    ADDRESS-087
+      LABEL-fb_insert
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-087
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-;;;; do it manually before calling LOAD reg_fb_data, 01
+    ADDRESS-087
+      LABEL-
+  FORMATTED-OUTPUT reg_fb_row, row_port_id
+  LOGFORMAT-OUTPUT reg_fb_row[sB], row_port_id[01]
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-row_port_id
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-088
+      LABEL-
+  FORMATTED-OUTPUT reg_fb_col, column_port_id
+  LOGFORMAT-OUTPUT reg_fb_col[sA], column_port_id[00]
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-column_port_id
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-089
+      LABEL-
+  FORMATTED-OUTPUT reg_fb_data, data_port_id
+  LOGFORMAT-OUTPUT reg_fb_data[sC], data_port_id[02]
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-data_port_id
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-08A
+      LABEL-
+  FORMATTED-RETURN
+  LOGFORMAT-RETURN
+INSTRUCTION-RETURN
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-08B
+      LABEL-fb_remove
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-08B
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-;;;; do it manually before calling LOAD reg_fb_data, 00
+    ADDRESS-08B
+      LABEL-
+  FORMATTED-LOAD reg_fb_data, 00
+  LOGFORMAT-LOAD reg_fb_data[sC], 00
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-00
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-08C
+      LABEL-
+  FORMATTED-OUTPUT reg_fb_row, row_port_id
+  LOGFORMAT-OUTPUT reg_fb_row[sB], row_port_id[01]
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-row_port_id
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-08D
+      LABEL-
+  FORMATTED-OUTPUT reg_fb_col, column_port_id
+  LOGFORMAT-OUTPUT reg_fb_col[sA], column_port_id[00]
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-column_port_id
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-08E
+      LABEL-
+  FORMATTED-OUTPUT reg_fb_data, data_port_id
+  LOGFORMAT-OUTPUT reg_fb_data[sC], data_port_id[02]
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-data_port_id
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-08F
+      LABEL-
+  FORMATTED-RETURN
+  LOGFORMAT-RETURN
+INSTRUCTION-RETURN
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-090
+      LABEL-fb_read
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-090
+      LABEL-
+  FORMATTED-OUTPUT reg_fb_row, row_port_id
+  LOGFORMAT-OUTPUT reg_fb_row[sB], row_port_id[01]
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_row
+  OP1 VALUE-sB
+   OPERAND2-row_port_id
+  OP2 VALUE-01
+    COMMENT-
+    ADDRESS-091
+      LABEL-
+  FORMATTED-OUTPUT reg_fb_col, column_port_id
+  LOGFORMAT-OUTPUT reg_fb_col[sA], column_port_id[00]
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_col
+  OP1 VALUE-sA
+   OPERAND2-column_port_id
+  OP2 VALUE-00
+    COMMENT-
+    ADDRESS-092
+      LABEL-
+  FORMATTED-INPUT reg_fb_data, data_port_id
+  LOGFORMAT-INPUT reg_fb_data[sC], data_port_id[02]
+INSTRUCTION-INPUT
+   OPERAND1-reg_fb_data
+  OP1 VALUE-sC
+   OPERAND2-data_port_id
+  OP2 VALUE-02
+    COMMENT-
+    ADDRESS-093
+      LABEL-
+  FORMATTED-RETURN
+  LOGFORMAT-RETURN
+INSTRUCTION-RETURN
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-094
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; interrupt service routine : load keycode into reg_direction from ps2 input if valid
+    ADDRESS-094
+      LABEL-isr
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-094
+      LABEL-
+  FORMATTED-INPUT reg_ps2_data, ps2_port_id
+  LOGFORMAT-INPUT reg_ps2_data[sD], ps2_port_id[03]
+INSTRUCTION-INPUT
+   OPERAND1-reg_ps2_data
+  OP1 VALUE-sD
+   OPERAND2-ps2_port_id
+  OP2 VALUE-03
+    COMMENT-
+    ADDRESS-095
+      LABEL-
+  FORMATTED-COMPARE reg_ps2_data, keycode_left
+  LOGFORMAT-COMPARE reg_ps2_data[sD], keycode_left[6B]
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+  OP1 VALUE-sD
+   OPERAND2-keycode_left
+  OP2 VALUE-6B
+    COMMENT-
+    ADDRESS-096
+      LABEL-
+  FORMATTED-JUMP Z, load
+  LOGFORMAT-JUMP Z, load[09D]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-load
+  OP2 VALUE-09D
+    COMMENT-
+    ADDRESS-097
+      LABEL-
+  FORMATTED-COMPARE reg_ps2_data, keycode_right
+  LOGFORMAT-COMPARE reg_ps2_data[sD], keycode_right[74]
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+  OP1 VALUE-sD
+   OPERAND2-keycode_right
+  OP2 VALUE-74
+    COMMENT-
+    ADDRESS-098
+      LABEL-
+  FORMATTED-JUMP Z, load
+  LOGFORMAT-JUMP Z, load[09D]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-load
+  OP2 VALUE-09D
+    COMMENT-
+    ADDRESS-099
+      LABEL-
+  FORMATTED-COMPARE reg_ps2_data, keycode_up
+  LOGFORMAT-COMPARE reg_ps2_data[sD], keycode_up[75]
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+  OP1 VALUE-sD
+   OPERAND2-keycode_up
+  OP2 VALUE-75
+    COMMENT-
+    ADDRESS-09A
+      LABEL-
+  FORMATTED-JUMP Z, load
+  LOGFORMAT-JUMP Z, load[09D]
+INSTRUCTION-JUMP
+   OPERAND1-Z
+  OP1 VALUE-Z
+   OPERAND2-load
+  OP2 VALUE-09D
+    COMMENT-
+    ADDRESS-09B
+      LABEL-
+  FORMATTED-COMPARE reg_ps2_data, keycode_down
+  LOGFORMAT-COMPARE reg_ps2_data[sD], keycode_down[72]
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+  OP1 VALUE-sD
+   OPERAND2-keycode_down
+  OP2 VALUE-72
+    COMMENT-
+    ADDRESS-09C
+      LABEL-
+  FORMATTED-JUMP NZ, fin
+  LOGFORMAT-JUMP NZ, fin[09E]
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+  OP1 VALUE-NZ
+   OPERAND2-fin
+  OP2 VALUE-09E
+    COMMENT-
+    ADDRESS-09D
+      LABEL-load
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-09D
+      LABEL-
+  FORMATTED-LOAD reg_snake_direction, reg_ps2_data
+  LOGFORMAT-LOAD reg_snake_direction[s8], reg_ps2_data[sD]
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_direction
+  OP1 VALUE-s8
+   OPERAND2-reg_ps2_data
+  OP2 VALUE-sD
+    COMMENT-
+    ADDRESS-09E
+      LABEL-fin
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-09E
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; return from isr and enable interrupts
+    ADDRESS-09E
+      LABEL-
+  FORMATTED-RETURNI ENABLE
+  LOGFORMAT-RETURNI ENABLE
+INSTRUCTION-RETURNI
+   OPERAND1-ENABLE
+  OP1 VALUE-ENABLE
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-09F
+      LABEL-
+  FORMATTED-
+  LOGFORMAT-
+INSTRUCTION-
+   OPERAND1-
+  OP1 VALUE-
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-; interrupt vector - at last address in the ROM
+    ADDRESS-3FF
+      LABEL-
+  FORMATTED-ADDRESS 3FF
+  LOGFORMAT-ADDRESS 3FF
+INSTRUCTION-ADDRESS
+   OPERAND1-3FF
+  OP1 VALUE-3FF
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-
+    ADDRESS-3FF
+      LABEL-
+  FORMATTED-JUMP isr
+  LOGFORMAT-JUMP isr[094]
+INSTRUCTION-JUMP
+   OPERAND1-isr
+  OP1 VALUE-094
+   OPERAND2-
+  OP2 VALUE-
+    COMMENT-

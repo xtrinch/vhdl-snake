@@ -1,0 +1,34 @@
+             CONSTANT delay_1us_constant, 0B
+             ADDRESS 000                     ; program se vedno zacne na naslovu 0
+      start: LOAD s3, 07                     ; v register s1 nalozimo 0F (prizgali bomo desne 4 ledice)
+       loop: OUTPUT s3, FF                   ; na izhod 01 dajemo vsebin registra s1
+             CALL delay_500us                ; poklicemo delay
+             CALL delay_500us
+             CALL delay_500us
+             CALL delay_500us
+             CALL delay_500us
+             CALL delay_500us
+             CALL delay_500us
+             CALL delay_500us
+             CALL delay_500us
+             CALL delay_500us
+             RR s3                           ; pomaknemo vsebino registra s1 v desno
+             JUMP loop
+  delay_1us: 
+             LOAD s0, delay_1us_constant
+   wait_1us: 
+             SUB s0, 01
+             JUMP NZ, wait_1us
+             RETURN
+delay_500us: 
+             LOAD s2, F0
+             LOAD s1, BD
+ wait_500us: 
+             CALL delay_1us
+             SUB s1, 01
+             SUBCY s2, 00
+             JUMP NC, wait_500us
+             RETURN
+             ADDRESS 3FF                     ; prekinitveno servisna rutina se nahaja na zadnjem
+             ;naslovu v romu (3FF)
+        isr: JUMP isr                        ; isr = interrupt service routine

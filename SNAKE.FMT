@@ -1,0 +1,246 @@
+                         ; port id's of picoblaze input/output devices
+                         CONSTANT column_port_id, 00
+                         CONSTANT row_port_id, 01
+                         CONSTANT data_port_id, 02
+                         CONSTANT ps2_port_id, 03
+                         CONSTANT rand_port_id, 04
+                         ; ps2 keycodes
+                         CONSTANT keycode_left, 6B
+                         CONSTANT keycode_right, 74
+                         CONSTANT keycode_up, 75
+                         CONSTANT keycode_down, 72
+                         CONSTANT keycode_enter, 5A
+                         ; game constants
+                         CONSTANT init_snake_len, 02
+                         ; register aliases
+                         NAMEREG sA, reg_fb_col
+                         NAMEREG sB, reg_fb_row
+                         NAMEREG sC, reg_fb_data
+                         NAMEREG sD, reg_ps2_data
+                         NAMEREG sE, reg_counter1
+                         NAMEREG sF, reg_score
+                         NAMEREG s9, reg_isfood
+                         NAMEREG s8, reg_snake_direction
+                         NAMEREG s7, reg_snake_len
+                         NAMEREG s6, reg_snake_head_row
+                         NAMEREG s5, reg_snake_head_col
+                         NAMEREG s4, reg_snake_tail_row
+                         NAMEREG s3, reg_snake_tail_col
+                         NAMEREG s2, reg_ram_index_head                  ; head writes the direction its going to this address
+                         NAMEREG s1, reg_ram_index_tail                  ; tail takes the direction and erases
+                         ; reset vector - at address 0, program always starts here
+                         ADDRESS 000
+             start_game: 
+                         CALL clear_fb
+                         CALL load_food
+                         CALL init_snake
+                         ENABLE INTERRUPT
+                         ; infinite loop until the game is lost
+              main_game: 
+                         LOAD reg_isfood, 00                             ; clear register that tell us whether the pixel is a food pixel
+                         ; head insertion
+                         COMPARE reg_snake_direction, keycode_left
+                         JUMP Z, add_to_snake_left
+                         COMPARE reg_snake_direction, keycode_right
+                         JUMP Z, add_to_snake_right
+                         COMPARE reg_snake_direction, keycode_up
+                         JUMP Z, add_to_snake_up
+                         COMPARE reg_snake_direction, keycode_down
+                         JUMP Z, add_to_snake_down
+      add_to_snake_left: 
+                         SUB reg_snake_head_col, 01
+                         JUMP cont
+     add_to_snake_right: 
+                         ADD reg_snake_head_col, 01
+                         JUMP cont
+        add_to_snake_up: 
+                         SUB reg_snake_head_row, 01
+                         JUMP cont
+      add_to_snake_down: 
+                         ADD reg_snake_head_row, 01
+                         JUMP cont
+                   cont: 
+                         LOAD reg_fb_col, reg_snake_head_col
+                         LOAD reg_fb_row, reg_snake_head_row
+                         ; check if within the bounds of our screen
+                         LOAD s0, reg_fb_row
+                         AND s0, 20
+                         JUMP NZ, end_game
+                         LOAD s0, reg_fb_col
+                         SUB s0, 28
+                         COMPARE s0, 00
+                         JUMP Z, end_game
+                         LOAD s0, reg_fb_col
+                         AND s0, 40
+                         COMPARE s0, 00
+                         JUMP NZ, end_game
+                         CALL fb_read
+                         COMPARE reg_fb_data, 02                         ; is read pixel a food pixel?
+                         JUMP NZ, cont2
+                         ADD reg_score, 01
+                         LOAD reg_isfood, 01
+                  cont2: 
+                         COMPARE reg_fb_data, 01                         ; is read pixel snake?
+                         JUMP NZ, cont4
+                         JUMP end_game                                   ; end game
+                  cont4: 
+                         LOAD reg_fb_data, 01                            ; code for snake pixel is 01
+                         CALL fb_insert
+                         STORE reg_snake_direction, (reg_ram_index_head) ; store the direction we went into scratchpad ram
+                         ADD reg_ram_index_head, 01
+                         ; tail removal
+                         COMPARE reg_isfood, 01                          ; if we ate food, don't remove anything
+                         JUMP Z, cont3
+                         LOAD reg_fb_col, reg_snake_tail_col
+                         LOAD reg_fb_row, reg_snake_tail_row
+                         CALL fb_remove
+                         FETCH s0, (reg_ram_index_tail)                  ; fetch direction to remove next from rom
+                         ADD reg_ram_index_tail, 01
+                         COMPARE s0, keycode_left
+                         JUMP Z, remove_from_snake_left
+                         COMPARE s0, keycode_right
+                         JUMP Z, remove_from_snake_right
+                         COMPARE s0, keycode_up
+                         JUMP Z, remove_from_snake_up
+                         COMPARE s0, keycode_down
+                         JUMP Z, remove_from_snake_down
+ remove_from_snake_left: 
+                         SUB reg_snake_tail_col, 01
+                         JUMP cont1
+remove_from_snake_right: 
+                         ADD reg_snake_tail_col, 01
+                         JUMP cont1
+   remove_from_snake_up: 
+                         SUB reg_snake_tail_row, 01
+                         JUMP cont1
+ remove_from_snake_down: 
+                         ADD reg_snake_tail_row, 01
+                         JUMP cont1
+                  cont1: 
+                  cont3: 
+                         ; randomly add food (or not add)
+                         INPUT reg_isfood, rand_port_id
+                         COMPARE reg_isfood, 07                          ; compare with 10 (dec), because a third of the time the input will be smaller (random number from 0-30)
+                         JUMP C, cont5
+                         CALL food_insert
+                  cont5: 
+                         OUTPUT reg_score, ps2_port_id
+                         ; output score
+                         CALL delay
+                         JUMP main_game
+                         ; routine that clears the screen and waits for input - enter for another game
+               end_game: 
+                         CALL clear_fb
+           another_game: 
+                         COMPARE reg_ps2_data, keycode_enter
+                         JUMP Z, start_game
+                         JUMP NZ, another_game
+                         ; 1s delay
+                  delay: 
+                         LOAD s0, FF
+                         LOAD reg_isfood, FF
+                         LOAD reg_counter1, 40                           ; 7f - 128 (1s) ; 40 - 64 (0.5s)
+             delayloop0: 
+             delayloop1: 
+             delayloop2: 
+                         SUB reg_isfood, 01
+                         COMPARE reg_isfood, 00
+                         JUMP NZ, delayloop2
+                         SUB s0, 01
+                         COMPARE s0, 00
+                         JUMP NZ, delayloop1
+                         SUB reg_counter1, 01
+                         COMPARE reg_counter1, 00
+                         JUMP NZ, delayloop0
+                         RETURN
+             init_snake: 
+                         LOAD reg_score, 02
+                         LOAD reg_snake_len, init_snake_len
+                         LOAD reg_snake_direction, keycode_right
+                         LOAD reg_ram_index_head, 01
+                         LOAD reg_ram_index_tail, 00
+                         LOAD s0, keycode_right                          ; load direction to remove next
+                         STORE s0, 00                                    ; store direction to remove next
+                         LOAD reg_snake_head_row, 02                     ; snake head row
+                         LOAD reg_snake_head_col, 03                     ; snake head col
+                         LOAD reg_snake_tail_row, 02                     ; snake tail row
+                         LOAD reg_snake_tail_col, 02                     ; snake tail col
+                         LOAD reg_fb_data, 01
+                         LOAD reg_fb_row, 02
+                         LOAD reg_fb_col, 02
+                         CALL fb_insert
+                         LOAD reg_fb_col, 03
+                         CALL fb_insert
+                         RETURN
+                         ; insert all the initial food
+              load_food: 
+                         LOAD reg_counter1, 10
+              food_loop: 
+                         CALL food_insert
+                         SUB reg_counter1, 01
+                         COMPARE reg_counter1, 00
+                         JUMP NZ, food_loop
+                         RETURN
+                         ; insert food at a random location : request two random numbers, insert 10 at location
+            food_insert: 
+                         INPUT reg_fb_col, rand_port_id
+                         INPUT reg_fb_row, rand_port_id
+                         CALL fb_read                                    ; read pixel at wanted location to check if the snake is already occupying it
+                         COMPARE reg_fb_data, 01                         ; is read pixel a snake pixel?
+                         JUMP Z, skipfood
+                         LOAD reg_fb_data, 02
+                         CALL fb_insert
+               skipfood: 
+                         RETURN
+                         ; clear ROM to all 0
+               clear_fb: 
+                         LOAD reg_fb_row, 00                             ; outer loop counter
+                         LOAD reg_fb_col, 00                             ; inner loop counter
+       clear_outer_loop: 
+       clear_inner_loop: 
+                         CALL fb_remove
+                         ADD reg_fb_col, 01
+                         COMPARE reg_fb_col, 28                          ; decimal 40
+                         JUMP NZ, clear_inner_loop
+                         ADD reg_fb_row, 01
+                         COMPARE reg_fb_row, 20                          ; decimal 32
+                         JUMP NZ, clear_outer_loop
+                         RETURN
+                         ; frame buffer insert / remove routines
+              fb_insert: 
+                         ;;;; do it manually before calling LOAD reg_fb_data, 01
+                         OUTPUT reg_fb_row, row_port_id
+                         OUTPUT reg_fb_col, column_port_id
+                         OUTPUT reg_fb_data, data_port_id
+                         RETURN
+              fb_remove: 
+                         ;;;; do it manually before calling LOAD reg_fb_data, 00
+                         LOAD reg_fb_data, 00
+                         OUTPUT reg_fb_row, row_port_id
+                         OUTPUT reg_fb_col, column_port_id
+                         OUTPUT reg_fb_data, data_port_id
+                         RETURN
+                fb_read: 
+                         OUTPUT reg_fb_row, row_port_id
+                         OUTPUT reg_fb_col, column_port_id
+                         INPUT reg_fb_data, data_port_id
+                         RETURN
+                         ; interrupt service routine : load keycode into reg_direction from ps2 input if valid
+                    isr: 
+                         INPUT reg_ps2_data, ps2_port_id
+                         COMPARE reg_ps2_data, keycode_left
+                         JUMP Z, load
+                         COMPARE reg_ps2_data, keycode_right
+                         JUMP Z, load
+                         COMPARE reg_ps2_data, keycode_up
+                         JUMP Z, load
+                         COMPARE reg_ps2_data, keycode_down
+                         JUMP NZ, fin
+                   load: 
+                         LOAD reg_snake_direction, reg_ps2_data
+                    fin: 
+                         ; return from isr and enable interrupts
+                         RETURNI ENABLE
+                         ; interrupt vector - at last address in the ROM
+                         ADDRESS 3FF
+                         JUMP isr

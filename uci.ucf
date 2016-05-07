@@ -1,0 +1,38 @@
+NET "clk_i" LOC="B8";
+NET "rst_i" LOC="B18";
+
+NET "anode_o<3>" LOC="F15";
+NET "anode_o<2>" LOC="C18";
+NET "anode_o<1>" LOC="H17";
+NET "anode_o<0>" LOC="F17";
+NET "cathode_o<0>" LOC="L18"; # 
+NET "cathode_o<1>" LOC="F18";
+NET "cathode_o<2>" LOC="D17";
+NET "cathode_o<3>" LOC="D16";
+NET "cathode_o<4>" LOC="G14";
+NET "cathode_o<5>" LOC="J17";
+NET "cathode_o<6>" LOC="H14";
+NET "kbdclk_i" LOC="R12"; # PS2 clock
+NET "kbddata_i" LOC="P11"; # PS2 data
+
+#NET "parity_o" LOC="R4";
+NET "kbd_data_o<7>" LOC="R4";
+NET "kbd_data_o<6>" LOC="F4";
+NET "kbd_data_o<5>" LOC="P15";
+NET "kbd_data_o<4>" LOC="E17";
+NET "kbd_data_o<3>" LOC="K14";
+NET "kbd_data_o<2>" LOC="K15";
+NET "kbd_data_o<1>" LOC="J15";
+NET "kbd_data_o<0>" LOC="J14";
+
+# VGA
+NET "color_red_o<0>"  LOC = "R9";
+NET "color_red_o<1>"  LOC = "T8";
+NET "color_red_o<2>"  LOC = "R8";
+NET "color_green_o<0>"  LOC = "N8";
+NET "color_green_o<1>"  LOC = "P8";
+NET "color_green_o<2>"  LOC = "P6";
+NET "color_blue_o<0>"  LOC = "U5";
+NET "color_blue_o<1>"  LOC = "U4";
+NET "hsync_o"  LOC = "T4";
+NET "vsync_o"  LOC = "U3";

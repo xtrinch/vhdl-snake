@@ -1,0 +1,1230 @@
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; port id's of picoblaze input/output devices
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-column_port_id
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-row_port_id
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-data_port_id
+   OPERAND2-02
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-ps2_port_id
+   OPERAND2-03
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-rand_port_id
+   OPERAND2-04
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; ps2 keycodes
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_left
+   OPERAND2-6B
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_right
+   OPERAND2-74
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_up
+   OPERAND2-75
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_down
+   OPERAND2-72
+    COMMENT-
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-keycode_enter
+   OPERAND2-5A
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; game constants
+      LABEL-
+INSTRUCTION-CONSTANT
+   OPERAND1-init_snake_len
+   OPERAND2-02
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; register aliases
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-sA
+   OPERAND2-reg_fb_col
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-sB
+   OPERAND2-reg_fb_row
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-sC
+   OPERAND2-reg_fb_data
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-sD
+   OPERAND2-reg_ps2_data
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-sE
+   OPERAND2-reg_counter1
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-sF
+   OPERAND2-reg_score
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-s9
+   OPERAND2-reg_isfood
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-s8
+   OPERAND2-reg_snake_direction
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-s7
+   OPERAND2-reg_snake_len
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-s6
+   OPERAND2-reg_snake_head_row
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-s5
+   OPERAND2-reg_snake_head_col
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-s4
+   OPERAND2-reg_snake_tail_row
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-s3
+   OPERAND2-reg_snake_tail_col
+    COMMENT-
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-s2
+   OPERAND2-reg_ram_index_head
+    COMMENT-; head writes the direction its going to this address
+      LABEL-
+INSTRUCTION-NAMEREG
+   OPERAND1-s1
+   OPERAND2-reg_ram_index_tail
+    COMMENT-; tail takes the direction and erases
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; reset vector - at address 0, program always starts here
+      LABEL-
+INSTRUCTION-ADDRESS
+   OPERAND1-000
+   OPERAND2-
+    COMMENT-
+      LABEL-start_game
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-clear_fb
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-load_food
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-init_snake
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-ENABLE
+   OPERAND1-INTERRUPT
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; infinite loop until the game is lost
+      LABEL-main_game
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_isfood
+   OPERAND2-00
+    COMMENT-; clear register that tell us whether the pixel is a food pixel
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; head insertion
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_snake_direction
+   OPERAND2-keycode_left
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-add_to_snake_left
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_snake_direction
+   OPERAND2-keycode_right
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-add_to_snake_right
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_snake_direction
+   OPERAND2-keycode_up
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-add_to_snake_up
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_snake_direction
+   OPERAND2-keycode_down
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-add_to_snake_down
+    COMMENT-
+      LABEL-add_to_snake_left
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-reg_snake_head_col
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-cont
+   OPERAND2-
+    COMMENT-
+      LABEL-add_to_snake_right
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-reg_snake_head_col
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-cont
+   OPERAND2-
+    COMMENT-
+      LABEL-add_to_snake_up
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-reg_snake_head_row
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-cont
+   OPERAND2-
+    COMMENT-
+      LABEL-add_to_snake_down
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-reg_snake_head_row
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-cont
+   OPERAND2-
+    COMMENT-
+      LABEL-cont
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+   OPERAND2-reg_snake_head_col
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_row
+   OPERAND2-reg_snake_head_row
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; check if within the bounds of our screen
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-reg_fb_row
+    COMMENT-
+      LABEL-
+INSTRUCTION-AND
+   OPERAND1-s0
+   OPERAND2-20
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-end_game
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-reg_fb_col
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s0
+   OPERAND2-28
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-end_game
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-reg_fb_col
+    COMMENT-
+      LABEL-
+INSTRUCTION-AND
+   OPERAND1-s0
+   OPERAND2-40
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-end_game
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-fb_read
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_data
+   OPERAND2-02
+    COMMENT-; is read pixel a food pixel?
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-cont2
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-reg_score
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_isfood
+   OPERAND2-01
+    COMMENT-
+      LABEL-cont2
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_data
+   OPERAND2-01
+    COMMENT-; is read pixel snake?
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-cont4
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-end_game
+   OPERAND2-
+    COMMENT-; end game
+      LABEL-cont4
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_data
+   OPERAND2-01
+    COMMENT-; code for snake pixel is 01
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-fb_insert
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-reg_snake_direction
+   OPERAND2-(reg_ram_index_head)
+    COMMENT-; store the direction we went into scratchpad ram
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-reg_ram_index_head
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; tail removal
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_isfood
+   OPERAND2-01
+    COMMENT-; if we ate food, don't remove anything
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-cont3
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+   OPERAND2-reg_snake_tail_col
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_row
+   OPERAND2-reg_snake_tail_row
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-fb_remove
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-FETCH
+   OPERAND1-s0
+   OPERAND2-(reg_ram_index_tail)
+    COMMENT-; fetch direction to remove next from rom
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-reg_ram_index_tail
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-keycode_left
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-remove_from_snake_left
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-keycode_right
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-remove_from_snake_right
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-keycode_up
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-remove_from_snake_up
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-keycode_down
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-remove_from_snake_down
+    COMMENT-
+      LABEL-remove_from_snake_left
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-reg_snake_tail_col
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-cont1
+   OPERAND2-
+    COMMENT-
+      LABEL-remove_from_snake_right
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-reg_snake_tail_col
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-cont1
+   OPERAND2-
+    COMMENT-
+      LABEL-remove_from_snake_up
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-reg_snake_tail_row
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-cont1
+   OPERAND2-
+    COMMENT-
+      LABEL-remove_from_snake_down
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-reg_snake_tail_row
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-cont1
+   OPERAND2-
+    COMMENT-
+      LABEL-cont1
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-cont3
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; randomly add food (or not add)
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-reg_isfood
+   OPERAND2-rand_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_isfood
+   OPERAND2-07
+    COMMENT-; compare with 10 (dec), because a third of the time the input will be smaller (random number from 0-30)
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-C
+   OPERAND2-cont5
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-food_insert
+   OPERAND2-
+    COMMENT-
+      LABEL-cont5
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_score
+   OPERAND2-ps2_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; output score
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-delay
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-main_game
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; routine that clears the screen and waits for input - enter for another game
+      LABEL-end_game
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-clear_fb
+   OPERAND2-
+    COMMENT-
+      LABEL-another_game
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+   OPERAND2-keycode_enter
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-start_game
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-another_game
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; 1s delay
+      LABEL-delay
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-FF
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_isfood
+   OPERAND2-FF
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_counter1
+   OPERAND2-40
+    COMMENT-; 7f - 128 (1s) ; 40 - 64 (0.5s)
+      LABEL-delayloop0
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-delayloop1
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-delayloop2
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-reg_isfood
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_isfood
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-delayloop2
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-s0
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-s0
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-delayloop1
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-reg_counter1
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_counter1
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-delayloop0
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-init_snake
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_score
+   OPERAND2-02
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_len
+   OPERAND2-init_snake_len
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_direction
+   OPERAND2-keycode_right
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_ram_index_head
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_ram_index_tail
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-s0
+   OPERAND2-keycode_right
+    COMMENT-; load direction to remove next
+      LABEL-
+INSTRUCTION-STORE
+   OPERAND1-s0
+   OPERAND2-00
+    COMMENT-; store direction to remove next
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_head_row
+   OPERAND2-02
+    COMMENT-; snake head row
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_head_col
+   OPERAND2-03
+    COMMENT-; snake head col
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_tail_row
+   OPERAND2-02
+    COMMENT-; snake tail row
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_tail_col
+   OPERAND2-02
+    COMMENT-; snake tail col
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_data
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_row
+   OPERAND2-02
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+   OPERAND2-02
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-fb_insert
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+   OPERAND2-03
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-fb_insert
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; insert all the initial food
+      LABEL-load_food
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_counter1
+   OPERAND2-10
+    COMMENT-
+      LABEL-food_loop
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-food_insert
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-SUB
+   OPERAND1-reg_counter1
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_counter1
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-food_loop
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; insert food at a random location : request two random numbers, insert 10 at location
+      LABEL-food_insert
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-reg_fb_col
+   OPERAND2-rand_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-reg_fb_row
+   OPERAND2-rand_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-fb_read
+   OPERAND2-
+    COMMENT-; read pixel at wanted location to check if the snake is already occupying it
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_data
+   OPERAND2-01
+    COMMENT-; is read pixel a snake pixel?
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-skipfood
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_data
+   OPERAND2-02
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-fb_insert
+   OPERAND2-
+    COMMENT-
+      LABEL-skipfood
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; clear ROM to all 0
+      LABEL-clear_fb
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_row
+   OPERAND2-00
+    COMMENT-; outer loop counter
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_col
+   OPERAND2-00
+    COMMENT-; inner loop counter
+      LABEL-clear_outer_loop
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-clear_inner_loop
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-CALL
+   OPERAND1-fb_remove
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-reg_fb_col
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_col
+   OPERAND2-28
+    COMMENT-; decimal 40
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-clear_inner_loop
+    COMMENT-
+      LABEL-
+INSTRUCTION-ADD
+   OPERAND1-reg_fb_row
+   OPERAND2-01
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_fb_row
+   OPERAND2-20
+    COMMENT-; decimal 32
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-clear_outer_loop
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; frame buffer insert / remove routines
+      LABEL-fb_insert
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;;;; do it manually before calling LOAD reg_fb_data, 01
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_row
+   OPERAND2-row_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_col
+   OPERAND2-column_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_data
+   OPERAND2-data_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-fb_remove
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-;;;; do it manually before calling LOAD reg_fb_data, 00
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_fb_data
+   OPERAND2-00
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_row
+   OPERAND2-row_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_col
+   OPERAND2-column_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_data
+   OPERAND2-data_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-fb_read
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_row
+   OPERAND2-row_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-OUTPUT
+   OPERAND1-reg_fb_col
+   OPERAND2-column_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-reg_fb_data
+   OPERAND2-data_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-RETURN
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; interrupt service routine : load keycode into reg_direction from ps2 input if valid
+      LABEL-isr
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-INPUT
+   OPERAND1-reg_ps2_data
+   OPERAND2-ps2_port_id
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+   OPERAND2-keycode_left
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-load
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+   OPERAND2-keycode_right
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-load
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+   OPERAND2-keycode_up
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-Z
+   OPERAND2-load
+    COMMENT-
+      LABEL-
+INSTRUCTION-COMPARE
+   OPERAND1-reg_ps2_data
+   OPERAND2-keycode_down
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-NZ
+   OPERAND2-fin
+    COMMENT-
+      LABEL-load
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-LOAD
+   OPERAND1-reg_snake_direction
+   OPERAND2-reg_ps2_data
+    COMMENT-
+      LABEL-fin
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; return from isr and enable interrupts
+      LABEL-
+INSTRUCTION-RETURNI
+   OPERAND1-ENABLE
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-
+   OPERAND1-
+   OPERAND2-
+    COMMENT-; interrupt vector - at last address in the ROM
+      LABEL-
+INSTRUCTION-ADDRESS
+   OPERAND1-3FF
+   OPERAND2-
+    COMMENT-
+      LABEL-
+INSTRUCTION-JUMP
+   OPERAND1-isr
+   OPERAND2-
+    COMMENT-

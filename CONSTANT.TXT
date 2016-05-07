@@ -1,0 +1,13 @@
+Table of constant values and their specified constant labels.
+
+00  column_port_id
+01  row_port_id
+02  data_port_id
+03  ps2_port_id
+04  rand_port_id
+6B  keycode_left
+74  keycode_right
+75  keycode_up
+72  keycode_down
+5A  keycode_enter
+02  init_snake_len
